@@ -76,7 +76,7 @@
                     <img src="http://clang-analyzer.llvm.org/images/scan_build_cmd.png" width="450px" alt="scan-build">
                     <br>
                     <a href="http://clang-analyzer.llvm.org/images/analyzer_html.png">
-                        <img src="images/analyzer_html.png" width="450px" alt="analyzer in browser">
+                        <img src="http://clang-analyzer.llvm.org/images/analyzer_html.png" width="450px" alt="analyzer in browser">
                     </a>
                     <br>
                     <b>
