@@ -56,7 +56,7 @@
                                                 checker-279.tar.bz2
                                             </a>
                                         </b>
-                                        (built November 14, 2016)
+                                        (built于2016年11月14日)
                                     </li>
                                     <li>
                                         <a href="http://clang-analyzer.llvm.org/release_notes.html">
@@ -120,98 +120,68 @@
         </tbody>
     </table>
     <h2 id="StaticAnalysis">
-        What is Static Analysis?
+        什么是静态分析？
     </h2>
     <p>
-        The term "static analysis" is conflated, but here we use it to mean a
-        collection of algorithms and techniques used to analyze source code in
-        order to automatically find bugs. The idea is similar in spirit to compiler
-        warnings (which can be useful for finding coding errors) but to take that
-        idea a step further and find bugs that are traditionally found using run-time
-        debugging techniques such as testing.
+        “静态分析”这个术语是一个组合名词（conflated），但在这里，我们用它来表示一个为自动找出bug，对源码进行分析的算法和技术的集合。这个主意类似于编译的警告（对于找到代码中的错误会非常有用），但又比这更进一步，找到通过传统的，例如测试，的运行时dubug方式才能找到的bug。
     </p>
     <p>
-        Static analysis bug-finding tools have evolved over the last several decades
-        from basic syntactic checkers to those that find deep bugs by reasoning
-        about the semantics of code. The goal of the Clang Static Analyzer is to
-        provide a industrial-quality static analysis framework for analyzing C,
-        C++, and Objective-C programs that is freely available, extensible, and
-        has a high quality of implementation.
+        静态分析找bug的工具，已经从基本的语法分析，到通过推理代码的语义找到深层的bug进化了几十年。Clang静态分析器的目标，是为C，C++，和Objective-C语言的程序，提供一个商业品质的静态分析框架，他是免费可以获取的，可扩展，并有着高质量的实现。
     </p>
     <h3 id="Clang">
-        Part of Clang and LLVM
+        Clang和LLVM的部分
     </h3>
     <p>
-        As its name implies, the Clang Static Analyzer is built on top of
+        正如它名称所暗示的，Clang静态分析器构建于
         <a href="http://clang.llvm.org">
             Clang
         </a>
-        and
+        和
         <a href="http://llvm.org">
             LLVM
         </a>
-        . Strictly speaking, the analyzer is part of Clang, as Clang consists
-        of a set of reusable C++ libraries for building powerful source-level tools.
-        The static analysis engine used by the Clang Static Analyzer is a Clang
-        library, and has the capability to be reused in different contexts and
-        by different clients.
+        的顶层。严格地说，这个分析器是Clang的一部分。Clang是由一系列可复用的C++的库构成的，可以用来构建强有力的源码级别的工具。Clang静态分析器使用过的静态分析引擎是一个Clang库，拥有被不同内容和客户端复用的能力。
     </p>
     <h2>
-        Important Points to Consider
+        要考虑的重要的点
     </h2>
     <p>
-        While we believe that the static analyzer is already very useful for finding
-        bugs, we ask you to bear in mind a few points when using it.
+        当我们相信静态分析器对找到bug是非常有用的，我们要求你在使用时记得一些事。
     </p>
     <h3>
-        Work-in-Progress
+        （半成品）Work-in-Progress
     </h3>
     <p>
-        The analyzer is a continuous work-in-progress. There are many planned
-        enhancements to improve both the precision and scope of its analysis algorithms
-        as well as the kinds of bugs it will find. While there are fundamental
-        limitations to what static analysis can do, we have a long way to go before
-        hitting that wall.
+        这个分析器是一个可持续加工的产品。这里有很多计划中的增强，来提高精确度，以及分析算法的范围，就如它将要发现的那些bug一样。虽然静态分析能够做什么还有巨大的限制，我们还有很长的路去走，才能叩击到那堵墙。
     </p>
     <h3>
-        Slower than Compilation
+        速度较编译更慢
     </h3>
     <p>
-        Operationally, using static analysis to automatically find deep program
-        bugs is about trading CPU time for the hardening of code. Because of the
-        deep analysis performed by state-of-the-art static analysis tools, static
-        analysis can be much slower than compilation.
+        在执行上，使用静态分析来自动发现深层的程序bug，是一个用CPU时间为代价，来强化代码的交易。由于这个深层的分析，是通过使用最先进技术（state-of-the-art）的静态分析工具执行的，静态分析因此会比编译更慢。
     </p>
     <p>
-        While the Clang Static Analyzer is being designed to be as fast and light-weight
-        as possible, please do not expect it to be as fast as compiling a program
-        (even with optimizations enabled). Some of the algorithms needed to find
-        bugs require in the worst case exponential time.
+        尽管Clang静态分析器被设计得尽可能的快和轻量级，请不要期望它想编译一个程序那样快（即使打开优化的情况下）。一些算法需要在最坏的情况下计算来找到bug，造成了指数级的时间。
     </p>
     <p>
-        The Clang Static Analyzer runs in a reasonable amount of time by both
-        bounding the amount of checking work it will do as well as using clever
-        algorithms to reduce the amount of work it must do to find bugs.
+        Clang静态分析器通过框定要检查项的数量，还使用聪明的算法来减少它必须要做的用来找到bug的工作的数量，来运行在合理的时间。
     </p>
     <h3>
-        False Positives
+        错误的报告
     </h3>
     <p>
-        Static analysis is not perfect. It can falsely flag bugs in a program
-        where the code behaves correctly. Because some code checks require more
-        analysis precision than others, the frequency of false positives can vary
-        widely between different checks. Our long-term goal is to have the analyzer
-        have a low false positive rate for most code on all checks.
+        静态分析不是完美的。它会有可能在程序中标记错误的bug，但其实那里的代码是正确的。由于一些代码的检查需要更多的分析准确性，在不同的检查中，错误报告的频率将出现非常大的变化。我们的长期目标，是让这个分析器对于大多数的代码能够有较低的错误报告率。
     </p>
     <p>
-        Please help us in this endeavor by
+        请通过
         <a href="http://clang-analyzer.llvm.org/filing_bugs.html">
-            reporting false positives
+        reporting false positives
+            报告错误的报告
         </a>
-        . False positives cannot be addressed unless we know about them.
+        来尽力帮助我们。错误的报告只有我们知道了才可以解决。
     </p>
     <h3>
-        More Checks
+        更多检查
     </h3>
     <p>
         Static analysis is not magic; a static analyzer can only find bugs that
