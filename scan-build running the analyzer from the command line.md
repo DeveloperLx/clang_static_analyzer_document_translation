@@ -160,35 +160,32 @@
         Basic Usage
     </h3>
     <p>
-        Basic usage of
         <tt>
             scan-build
         </tt>
-        的基本用法是很简单的：只需
-        is designed to be simple: just place the word "scan-build" in front of
-        your build command:
+        的基本用法是很简单的：只需将"scan-build"放到你build命令的前面：
     </p>
     <pre class="code_example">$ <span class="code_highlight">scan-build</span> make
 $ <span class="code_highlight">scan-build</span> xcodebuild
 </pre>
     <p>
-        In the first case
+        第一种情况
         <tt>
             scan-build
         </tt>
-        analyzes the code of a project built with
+        分析了使用
         <tt>
             make
         </tt>
-        and in the second case
+        build的项目的代码，第二种情况
         <tt>
             scan-build
         </tt>
-        analyzes a project built using
+        分析了使用
         <tt>
             xcodebuild
         </tt>
-        .
+        build的项目
     </p>
     <p>
     </p>
