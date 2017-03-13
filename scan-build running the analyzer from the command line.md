@@ -190,67 +190,65 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
     <p>
     </p>
     <p>
-        Here is the general format for invoking
+        这个是调用
         <tt>
             scan-build
         </tt>
-        :
+        的一般的格式：
     </p>
     <pre class="code_example">$ <span class="code_highlight">scan-build</span> <i>[scan-build options]</i> <span class="code_highlight">&lt;command&gt;</span> <i>[command options]</i>
 </pre>
     <p>
-        Operationally,
+        在操作上，
         <tt>
             scan-build
         </tt>
-        literally runs &lt;command&gt; with all of the subsequent options passed
-        to it. For example, one can pass
+        用全部随后传给它的选项，照字面地运行了&lt;command&gt;。例如，可以传递
         <tt>
             -j4
         </tt>
-        to
+        选项到
         <tt>
             make
         </tt>
-        get a parallel build over 4 cores:
+        来获取4核的并行执行：
     </p>
     <pre class="code_example">$ scan-build make <span class="code_highlight">-j4</span>
 </pre>
     <p>
-        In almost all cases,
+        在大多情况下，
         <tt>
             scan-build
         </tt>
-        makes no effort to interpret the options after the build command; it simply
-        passes them through. In general,
+        不需要转换build命令后面的选项；一般来说，
         <tt>
             scan-build
         </tt>
-        should support parallel builds, but
+        支持并行地build，
         <b>
-            not distributed builds
+            但不支持分布式的build
         </b>
-        .
+        。
     </p>
     <p>
-        It is also possible to use
+        使用
         <tt>
             scan-build
         </tt>
-        to analyze specific files:
+        去分析指定的文件也是可以的：
     </p>
     <pre class="code_example"> $ scan-build gcc -c <span class="code_highlight">t1.c t2.c</span>
 </pre>
     <p>
-        This example causes the files
+        这个例子分析了
         <tt>
             t1.c
         </tt>
-        and
+        和
         <tt>
             t2.c
         </tt>
-        to be analyzed.
+        文件。
     </p>
     <h3 id="scanbuild_forwindowsusers">
         For Windows Users
