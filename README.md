@@ -83,14 +83,14 @@
                         <div class="spiffyfg">
                             <div style="padding:15px">
                                 <h3 style="margin:0px;padding:0px">
-                                    Other Platforms
+                                    其它平台
                                 </h3>
                                 <p>
-                                    For other platforms, please follow the instructions for
+                                    对于其它平台，请跟随
                                     <a href="http://clang-analyzer.llvm.org/installation#OtherPlatforms">
-                                        building the analyzer
+                                        说明
                                     </a>
-                                    from source code.
+                                    从源码来build分析器。
                                 </p>
                                 <p>
                                 </p>
@@ -104,7 +104,7 @@
                     </a>
                     <div style="text-align:center">
                         <b>
-                            Viewing static analyzer results in Xcode
+                            在Xcode中查看静态分析的结果
                         </b>
                     </div>
                     <a href="http://clang-analyzer.llvm.org/images/analyzer_html.png">
@@ -112,7 +112,7 @@
                     </a>
                     <div style="text-align:center">
                         <b>
-                            Viewing static analyzer results in a web browser
+                            在web浏览器中查看静态分析结果
                         </b>
                     </div>
                 </td>
