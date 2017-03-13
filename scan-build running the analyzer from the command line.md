@@ -164,20 +164,13 @@
         <tt>
             scan-build
         </tt>
+        的基本用法是很简单的：只需
         is designed to be simple: just place the word "scan-build" in front of
         your build command:
     </p>
-    <pre class="code_example">
-        $
-        <span class="code_highlight">
-            scan-build
-        </span>
-        make $
-        <span class="code_highlight">
-            scan-build
-        </span>
-        xcodebuild
-    </pre>
+    <pre class="code_example">$ <span class="code_highlight">scan-build</span> make
+$ <span class="code_highlight">scan-build</span> xcodebuild
+</pre>
     <p>
         In the first case
         <tt>
@@ -206,21 +199,8 @@
         </tt>
         :
     </p>
-    <pre class="code_example">
-        $
-        <span class="code_highlight">
-            scan-build
-        </span>
-        <i>
-            [scan-build options]
-        </i>
-        <span class="code_highlight">
-            &lt;command&gt;
-        </span>
-        <i>
-            [command options]
-        </i>
-    </pre>
+    <pre class="code_example">$ <span class="code_highlight">scan-build</span> <i>[scan-build options]</i> <span class="code_highlight">&lt;command&gt;</span> <i>[command options]</i>
+</pre>
     <p>
         Operationally,
         <tt>
@@ -237,12 +217,8 @@
         </tt>
         get a parallel build over 4 cores:
     </p>
-    <pre class="code_example">
-        $ scan-build make
-        <span class="code_highlight">
-            -j4
-        </span>
-    </pre>
+    <pre class="code_example">$ scan-build make <span class="code_highlight">-j4</span>
+</pre>
     <p>
         In almost all cases,
         <tt>
@@ -266,12 +242,8 @@
         </tt>
         to analyze specific files:
     </p>
-    <pre class="code_example">
-        $ scan-build gcc -c
-        <span class="code_highlight">
-            t1.c t2.c
-        </span>
-    </pre>
+    <pre class="code_example"> $ scan-build gcc -c <span class="code_highlight">t1.c t2.c</span>
+</pre>
     <p>
         This example causes the files
         <tt>
