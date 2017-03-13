@@ -1,75 +1,61 @@
-# scan-build: running the analyzer from the command line
+# scan-build: 从命令行中运行分析器
 ---
 #### [原文地址](http://clang-analyzer.llvm.org/scan-build.html) 翻译：[DeveloperLx](http://weibo.com/DeveloperLx)
 
 <div id="content">
-    <h1>
-        scan-build: running the analyzer from the command line
-    </h1>
     <table style="margin-top:0px" width="100%" cellpadding="0px" cellspacing="0">
         <tbody>
             <tr>
                 <td>
                     <h3>
-                        What is it?
+                        它是什么？
                     </h3>
                     <p>
                         <b>
                             scan-build
                         </b>
-                        is a command line utility that enables a user to run the static analyzer
-                        over their codebase as part of performing a regular build (from the command
-                        line).
+                        是一个命令行的工具，让用户能够在它们的代码库上运行静态分析，作为正常build的一部分（从命令行）。
                     </p>
                     <h3>
-                        How does it work?
+                        它怎么工作？
                     </h3>
                     <p>
-                        During a project build, as source files are compiled they are also analyzed
-                        in tandem by the static analyzer.
+                        在项目build期间，当源文件被编译的时候，也通过静态分析器串联了分析。
                     </p>
                     <p>
-                        Upon completion of the build, results are then presented to the user within
-                        a web browser.
+                        当build完成后，结果会在一个web浏览器中展示给用户。
                     </p>
                     <h3>
-                        Will it work with any build system?
+                        它在任何build系统下都能工作么？
                     </h3>
                     <p>
                         <b>
                             scan-build
                         </b>
-                        has little or no knowledge about how you build your code. It works by
-                        overriding the
+                        对于你怎么build你的code了解得很少。它通过覆盖
                         <tt>
                             CC
                         </tt>
-                        and
+                        和
                         <tt>
                             CXX
                         </tt>
-                        environment variables to (hopefully) change your build to use a "fake"
-                        compiler instead of the one that would normally build your project. This
-                        fake compiler executes either
+                        环境下的变量，来（有希望地）改变你的build去使用一个“假的”编译器，来替换那个能够正常build你的项目的以工作。这个假编译器执行
                         <tt>
                             clang
                         </tt>
-                        or
+                        或
                         <tt>
                             gcc
                         </tt>
-                        (depending on the platform) to compile your code and then executes the
-                        static analyzer to analyze your code.
+                        （依赖于平台）来编译你的代码，然后执行静态分析去分析你的代码。
                     </p>
                     <p>
-                        This "poor man's interposition" works amazingly well in many cases and
-                        falls down in others. Please consult the information on this page on making
-                        the best use of
+                        这个”穷人的干涉“的工作在很多的情况下令人惊奇得好，其它失败。请在这页查阅关于最好地使用
                         <b>
                             scan-build
                         </b>
-                        , which includes getting it to work when the aforementioned hack fails
-                        to work.
+                        的信息，它包含当前面提到的hack工作失败时该怎么办。
                     </p>
                 </td>
                 <td style="padding-left:10px; text-align:center">
@@ -80,14 +66,14 @@
                     </a>
                     <br>
                     <b>
-                        Viewing static analyzer results in a web browser
+                        在web浏览器中查看静态分析的结果
                     </b>
                 </td>
             </tr>
         </tbody>
     </table>
     <h2>
-        Contents
+        内容
     </h2>
     <ul>
         <li>
@@ -149,20 +135,18 @@
         Getting Started
     </h2>
     <p>
-        The
         <tt>
             scan-build
         </tt>
-        command can be used to analyze an entire project by essentially interposing
-        on a project's build process. This means that to run the analyzer using
+        命令可以用来通过本质上地干预项目的build过程，来分析一个整个的项目。这意味着为了使用
         <tt>
             scan-build
         </tt>
-        , you will use
+        来执行分析器，你可以使用
         <tt>
             scan-build
         </tt>
-        to analyze the source files compiled by
+        ，来分析在项目build期间由
         <tt>
             gcc
         </tt>
@@ -170,8 +154,7 @@
         <tt>
             clang
         </tt>
-        during a project build. This means that any files that are not compiled
-        will also not be analyzed.
+        编译的源文件。同时这也意味着任何没有被编译的文件也不会被分析。
     </p>
     <h3 id="scanbuild_basicusage">
         Basic Usage
