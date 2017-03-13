@@ -1,6 +1,6 @@
 # clang_static_analyzer_document_translation
-
-
+---
+#### [原文地址](http://clang-analyzer.llvm.org/) 翻译：[DeveloperLx](http://weibo.com/DeveloperLx)
 
 
 
@@ -11,52 +11,37 @@
             <tr>
                 <td>
                     <h1>
-                        Clang Static Analyzer
+                        Clang静态分析器
                     </h1>
-                    <p>
-                        The Clang Static Analyzer is a source code analysis tool that finds bugs
-                        in C, C++, and Objective-C programs.
+                    <p>	
+                    	Clang静态分析器是一个源码分析工具，可以找出在C, C++, 和Objective-C中的bug。
                     </p>
                     <p>
+                    	当前它既可以作为
                         Currently it can be run either as a
                         <a href="scan-build.html">
                             standalone tool
+                            单独的工具
                         </a>
+                        ，也可以
                         or
                         <a href="xcode.html">
+                        	嵌入到Xcode中
                             within Xcode
                         </a>
-                        . The standalone tool is invoked from the command line, and is intended
-                        to be run in tandem with a build of a codebase.
+                        。单的工程是由命令行调用的，它会基于一个代码库的build，串行地运行。
                     </p>
                     <p>
-                        The analyzer is 100% open source and is part of the
+                    	这个分析器是100%开源的，且它是
                         <a href="http://clang.llvm.org">
                             Clang
                         </a>
-                        project. Like the rest of Clang, the analyzer is implemented as a C++
-                        library that can be used by other tools and applications.
+                        项目的一部分。类似于Clang的其它部分，这个分析器实现为一个C++库，它可以被其它工具和应用使用。
                     </p>
                     <h2>
                         Download
                     </h2>
                     <div style="padding:0px; font-size: 90%">
-                        <b class="spiffy">
-                            <b class="spiffy1">
-                                <b>
-                                </b>
-                            </b>
-                            <b class="spiffy2">
-                                <b>
-                                </b>
-                            </b>
-                            <b class="spiffy3">
-                            </b>
-                            <b class="spiffy4">
-                            </b>
-                            <b class="spiffy5">
-                            </b>
-                        </b>
                         <div class="spiffyfg">
                             <div style="padding:15px">
                                 <h3 style="margin:0px;padding:0px">
@@ -93,40 +78,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <b class="spiffy">
-                            <b class="spiffy5">
-                            </b>
-                            <b class="spiffy4">
-                            </b>
-                            <b class="spiffy3">
-                            </b>
-                            <b class="spiffy2">
-                                <b>
-                                </b>
-                            </b>
-                            <b class="spiffy1">
-                                <b>
-                                </b>
-                            </b>
-                        </b>
                     </div>
                     <div style="padding:0; margin-top:10px; font-size: 90%">
-                        <b class="spiffy">
-                            <b class="spiffy1">
-                                <b>
-                                </b>
-                            </b>
-                            <b class="spiffy2">
-                                <b>
-                                </b>
-                            </b>
-                            <b class="spiffy3">
-                            </b>
-                            <b class="spiffy4">
-                            </b>
-                            <b class="spiffy5">
-                            </b>
-                        </b>
                         <div class="spiffyfg">
                             <div style="padding:15px">
                                 <h3 style="margin:0px;padding:0px">
@@ -143,22 +96,6 @@
                                 </p>
                             </div>
                         </div>
-                        <b class="spiffy">
-                            <b class="spiffy5">
-                            </b>
-                            <b class="spiffy4">
-                            </b>
-                            <b class="spiffy3">
-                            </b>
-                            <b class="spiffy2">
-                                <b>
-                                </b>
-                            </b>
-                            <b class="spiffy1">
-                                <b>
-                                </b>
-                            </b>
-                        </b>
                     </div>
                 </td>
                 <td style="padding-left:10px">
