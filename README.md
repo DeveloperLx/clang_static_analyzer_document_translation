@@ -16,14 +16,12 @@
                     </p>
                     <p>
                     	当前它既可以作为
-                        <a href="http://clang-analyzer.llvm.org/scan-build.html">
-                            standalone tool
+                        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/scan-build%20running%20the%20analyzer%20from%20the%20command%20line.md">
                             单独的工具
                         </a>
                         ，也可以
                         <a href="http://clang-analyzer.llvm.org/xcode.html">
                         	嵌入到Xcode中
-                            within Xcode
                         </a>
                         。单的工程是由命令行调用的，它会基于一个代码库的build，串行地运行。
                     </p>
@@ -67,7 +65,7 @@
                                             安装
                                         </a>
                                         和
-                                        <a href="http://clang-analyzer.llvm.org/scan-build.html">
+                                        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/scan-build%20running%20the%20analyzer%20from%20the%20command%20line.md">
                                             用法
                                         </a>
                                     </li>
