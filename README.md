@@ -19,13 +19,13 @@
                     <p>
                     	当前它既可以作为
                         Currently it can be run either as a
-                        <a href="scan-build.html">
+                        <a href="http://clang-analyzer.llvm.org/scan-build.html">
                             standalone tool
                             单独的工具
                         </a>
                         ，也可以
                         or
-                        <a href="xcode.html">
+                        <a href="http://clang-analyzer.llvm.org/xcode.html">
                         	嵌入到Xcode中
                             within Xcode
                         </a>
@@ -39,7 +39,7 @@
                         项目的一部分。类似于Clang的其它部分，这个分析器实现为一个C++库，它可以被其它工具和应用使用。
                     </p>
                     <h2>
-                        Download
+                        下载
                     </h2>
                     <div style="padding:0px; font-size: 90%">
                         <div class="spiffyfg">
@@ -52,27 +52,27 @@
                                         Latest build (10.8+):
                                         <br>
                                         <b>
-                                            <a href="downloads/checker-279.tar.bz2">
+                                            <a href="http://clang-analyzer.llvm.org/downloads/checker-279.tar.bz2">
                                                 checker-279.tar.bz2
                                             </a>
                                         </b>
                                         (built November 14, 2016)
                                     </li>
                                     <li>
-                                        <a href="/release_notes.html">
-                                            Release notes
+                                        <a href="http://clang-analyzer.llvm.org/release_notes.html">
+                                            发版说明
                                         </a>
                                     </li>
                                     <li>
-                                        This build can be used both from the command line and from within Xcode
+                                    	这个包即可用于命令行，亦可用在Xcode中
                                     </li>
                                     <li>
-                                        <a href="/installation.html">
-                                            Installation
+                                        <a href="http://clang-analyzer.llvm.org/installation.html">
+                                            安装
                                         </a>
-                                        and
-                                        <a href="/scan-build.html">
-                                            usage
+                                        和
+                                        <a href="http://clang-analyzer.llvm.org/scan-build.html">
+                                            用法
                                         </a>
                                     </li>
                                 </ul>
@@ -87,7 +87,7 @@
                                 </h3>
                                 <p>
                                     For other platforms, please follow the instructions for
-                                    <a href="/installation#OtherPlatforms">
+                                    <a href="http://clang-analyzer.llvm.org/installation#OtherPlatforms">
                                         building the analyzer
                                     </a>
                                     from source code.
@@ -205,7 +205,7 @@
     </p>
     <p>
         Please help us in this endeavor by
-        <a href="filing_bugs.html">
+        <a href="http://clang-analyzer.llvm.org/filing_bugs.html">
             reporting false positives
         </a>
         . False positives cannot be addressed unless we know about them.
@@ -218,7 +218,7 @@
         it has been specifically engineered to find. If there are specific kinds
         of bugs you would like the Clang Static Analyzer to find, please feel free
         to file
-        <a href="filing_bugs.html">
+        <a href="http://clang-analyzer.llvm.org/filing_bugs.html">
             feature requests
         </a>
         or contribute your own patches.
