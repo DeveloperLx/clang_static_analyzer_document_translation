@@ -254,76 +254,57 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         For Windows Users
     </h3>
     <p>
-        Windows users must have Perl installed to use scan-build.
+        Windows用户必须安装了Perl，才能使用scan-build。
     </p>
     <p>
         <tt>
             scan-build.bat
         </tt>
-        script allows you to launch scan-build in the same way as it described
-        in the Basic Usage section above. To invoke scan-build from an arbitrary
-        location, add the path to the folder containing scan-build.bat to your
-        PATH environment variable.
+        脚本，让你可以以与上面基本用法描述一样的方式运行scan-build。为了从任意的位置调用scan-build，添加包含scan-build.bat的目录的路径到你的PATH环境变量中。
     </p>
     <p>
-        If you have unexpected compilation/make problems when running scan-build
-        with MinGW/MSYS the following information may be helpful:
+        当使用MinGW/MSYS运行scan-build时，如果你遇到了意外的compilation/make问题，下面的信息或许是有帮助的：
     </p>
     <ul>
         <li>
-            If getting unexpected
+            当从Windows的cmd中，使用MSYS来build时，如果意外地得到了
             <tt>
                 "fatal error: no input files"
             </tt>
-            while building with MSYS make from the Windows cmd, try one of these solutions:
+            ，尝试以下解决方案中的一种：
         </li>
         <ul>
             <li>
-                Use MinGW
+                使用MinGW
                 <tt>
                     mingw32-make
                 </tt>
-                instead of MSYS
+                替换MSYS
                 <tt>
                     make
                 </tt>
-                and exclude the path to MSYS from PATH to prevent
+                ，并从PATH中排除到MSYS的路径，来避免
                 <tt>
                     mingw32-make
                 </tt>
-                from using MSYS utils. MSYS utils are dependent on the MSYS runtime and
-                they are not intended for being run from the Windows cmd. Specifically,
-                makefile commands with backslashed quotes may be heavily corrupted when
-                passed for execution.
+                使用MSYS工具。MSYS依赖于MSYS的运行时，它并没有打算被Windows的cmd执行。特别地，当传入使用反引号的makefile命令，会严重地破坏执行。
             </li>
             <li>
-                Run
+                从sh shell运行
                 <tt>
                     make
                 </tt>
-                from the sh shell:
-                <pre class="code_example">
-                    $
-                    <span class="code_highlight">
-                        scan-build
-                    </span>
-                    <i>
-                        [scan-build options]
-                    </i>
-                    sh -c "make
-                    <i>
-                        [make options]
-                    </i>
-                    "
-                </pre>
+                ：
+                <pre class="code_example">$ <span class="code_highlight">scan-build</span> <i>[scan-build options]</i> sh -c "make <i>[make options]</i>"
+</pre>
             </li>
         </ul>
         <li>
-            If getting
+            当使用GNU Make 3.81时，如果获得了
             <tt>
                 "Error : *** target pattern contains no `%'"
             </tt>
-            while using GNU Make 3.81, try to use another version of make.
+            ，尝试使用另一个版本的make。
         </li>
     </ul>
     <h3 id="scanbuild_otheroptions">
@@ -336,17 +317,9 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         </tt>
         . These options prefix the build command. For example:
     </p>
-    <pre class="code_example">
-        $ scan-build
-        <span class="code_highlight">
-            -k -V
-        </span>
-        make $ scan-build
-        <span class="code_highlight">
-            -k -V
-        </span>
-        xcodebuild
-    </pre>
+    <pre class="code_example"> $ scan-build <span class="code_highlight">-k -V</span> make
+ $ scan-build <span class="code_highlight">-k -V</span> xcodebuild
+</pre>
     <p>
         Here is a subset of useful options:
     </p>
