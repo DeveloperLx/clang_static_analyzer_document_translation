@@ -2,8 +2,6 @@
 ---
 #### [原文地址](http://clang-analyzer.llvm.org/) 翻译：[DeveloperLx](http://weibo.com/DeveloperLx)
 
-
-
 <div id="content">
     <table style="margin-top:0px" width="100%" border="0" cellpadding="0px"
     cellspacing="0">
