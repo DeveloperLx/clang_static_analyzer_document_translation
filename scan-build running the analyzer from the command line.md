@@ -311,17 +311,18 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         Other Options
     </h3>
     <p>
+        正如上面提到的，额外的选项可以传递给
         As mentioned above, extra options can be passed to
         <tt>
             scan-build
         </tt>
-        . These options prefix the build command. For example:
+        。这些选项给build命令添加了前缀。例如：
     </p>
     <pre class="code_example"> $ scan-build <span class="code_highlight">-k -V</span> make
  $ scan-build <span class="code_highlight">-k -V</span> xcodebuild
 </pre>
     <p>
-        Here is a subset of useful options:
+        这里是部分可用的选项：
     </p>
     <table class="options">
         <colgroup>
@@ -454,11 +455,11 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         </tbody>
     </table>
     <p>
-        A complete list of options can be obtained by running
+        不带任何参数地运行
         <tt>
             scan-build
         </tt>
-        with no arguments.
+        可以获得完整的选项列表。
     </p>
     <h3 id="scanbuild_output">
         Output of scan-build
