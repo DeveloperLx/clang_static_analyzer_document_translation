@@ -162,16 +162,16 @@
                     </div>
                 </td>
                 <td style="padding-left:10px">
-                    <a href="images/analyzer_xcode.png">
-                        <img src="images/analyzer_xcode.png" width="450" alt="analyzer in xcode">
+                    <a href="http://clang-analyzer.llvm.org/images/analyzer_xcode.png">
+                        <img src="http://clang-analyzer.llvm.org/images/analyzer_xcode.png" width="450" alt="analyzer in xcode">
                     </a>
                     <div style="text-align:center">
                         <b>
                             Viewing static analyzer results in Xcode
                         </b>
                     </div>
-                    <a href="images/analyzer_html.png">
-                        <img src="images/analyzer_html.png" width="450" alt="analyzer in browser">
+                    <a href="http://clang-analyzer.llvm.org/images/analyzer_html.png">
+                        <img src="http://clang-analyzer.llvm.org/images/analyzer_html.png" width="450" alt="analyzer in browser">
                     </a>
                     <div style="text-align:center">
                         <b>
