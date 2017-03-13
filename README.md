@@ -175,7 +175,6 @@
     <p>
         请通过
         <a href="http://clang-analyzer.llvm.org/filing_bugs.html">
-        reporting false positives
             报告错误的报告
         </a>
         来尽力帮助我们。错误的报告只有我们知道了才可以解决。
@@ -184,13 +183,10 @@
         更多检查
     </h3>
     <p>
-        Static analysis is not magic; a static analyzer can only find bugs that
-        it has been specifically engineered to find. If there are specific kinds
-        of bugs you would like the Clang Static Analyzer to find, please feel free
-        to file
+        静态分析不是魔法；一个静态分析器只能发现被特定设计过要去发现的bug。如果有你想要让Clang静态分析器找出的特定的bug，请放轻松来提出
         <a href="http://clang-analyzer.llvm.org/filing_bugs.html">
-            feature requests
+            特性请求
         </a>
-        or contribute your own patches.
+        或贡献你自己的补丁。
     </p>
 </div>
