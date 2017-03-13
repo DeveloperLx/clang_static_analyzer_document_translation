@@ -18,13 +18,11 @@
                     </p>
                     <p>
                     	当前它既可以作为
-                        Currently it can be run either as a
                         <a href="http://clang-analyzer.llvm.org/scan-build.html">
                             standalone tool
                             单独的工具
                         </a>
                         ，也可以
-                        or
                         <a href="http://clang-analyzer.llvm.org/xcode.html">
                         	嵌入到Xcode中
                             within Xcode
