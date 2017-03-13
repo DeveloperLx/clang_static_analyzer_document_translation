@@ -73,9 +73,9 @@
                     </p>
                 </td>
                 <td style="padding-left:10px; text-align:center">
-                    <img src="images/scan_build_cmd.png" width="450px" alt="scan-build">
+                    <img src="http://clang-analyzer.llvm.org/images/scan_build_cmd.png" width="450px" alt="scan-build">
                     <br>
-                    <a href="images/analyzer_html.png">
+                    <a href="http://clang-analyzer.llvm.org/images/analyzer_html.png">
                         <img src="images/analyzer_html.png" width="450px" alt="analyzer in browser">
                     </a>
                     <br>
@@ -781,7 +781,7 @@
         their project right from a menu without most of the setup described later.
     </p>
     <p>
-        <a href="/xcode.html">
+        <a href="http://clang-analyzer.llvm.org/xcode.html">
             Instructions are available
         </a>
         on this website on how to use open source builds of the analyzer as a
