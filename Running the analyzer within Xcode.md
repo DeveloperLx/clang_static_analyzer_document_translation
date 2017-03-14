@@ -36,7 +36,6 @@
                     <a href="http://clang-analyzer.llvm.org/images/analyzer_xcode.png">
                         <img src="http://clang-analyzer.llvm.org/images/analyzer_xcode.png" width="620px" alt="analyzer in xcode">
                     </a>
-                    <br>
                     <b>
                         在Xcode中查看静态分析的结果
                     </b>
@@ -136,12 +135,10 @@
 用法：set-xcode-analyzer [options]
 
 选项：
-  -h, --help            展示这个的帮助信息并退出
-  --use-checker-build=PATH
-                        使用位于提供的绝对路径的Clang
-                        Use the Clang located at the provided absolute path,
-                        例如：/Users/foo/checker-1
-  --use-xcode-clang     使用打包在Xcode中的Clang
+  -h, --help                展示这个的帮助信息并退出
+  --use-checker-build=PATH  使用位于提供的绝对路径的Clang
+                            例如：/Users/foo/checker-1
+  --use-xcode-clang         使用打包在Xcode中的Clang
 </pre>
     <p>
         在操作上，
