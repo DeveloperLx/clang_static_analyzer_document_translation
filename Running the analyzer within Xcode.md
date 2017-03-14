@@ -133,26 +133,26 @@
         的副本：
     </p>
     <pre class="code_example">$ <b>set-xcode-analyzer -h</b>
-Usage: set-xcode-analyzer [options]
+用法：set-xcode-analyzer [options]
 
-Options:
-  -h, --help            show this help message and exit
+选项：
+  -h, --help            展示这个的帮助信息并退出
   --use-checker-build=PATH
+                        使用位于提供的绝对路径的Clang
                         Use the Clang located at the provided absolute path,
-                        e.g. /Users/foo/checker-1
-  --use-xcode-clang     Use the Clang bundled with Xcode
+                        例如：/Users/foo/checker-1
+  --use-xcode-clang     使用打包在Xcode中的Clang
 </pre>
     <p>
-        Operationally,
+        在操作上，
         <b>
             set-xcode-analyzer
         </b>
-        edits Xcode's configuration files to point it to use the version of
+        编辑了Xcode的配置文件，来让它使用你指定的用来进行静态分析的
         <tt>
             clang
         </tt>
-        you specify for static analysis. Within this model it provides you two
-        basic modes:
+        的版本。在这个模型中，它提供给你两种基本的模式：
     </p>
     <ul>
         <li>
