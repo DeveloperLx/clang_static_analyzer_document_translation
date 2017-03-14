@@ -504,7 +504,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         Recommended Usage Guidelines
     </h2>
     <p>
-        This section describes a few recommendations with running the analyzer.
+    	这一部分描述几个运行分析器时的建议。
     </p>
     <h3 id="recommended_debug">
         ALWAYS analyze a project in its "debug" configuration
