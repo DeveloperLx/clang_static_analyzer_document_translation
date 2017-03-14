@@ -91,37 +91,33 @@
         在Xcode中使用开源的分析器build
     </h2>
     <p>
+        默认地，Xcode使用绑定的
         By default, Xcode uses the version of
         <tt>
             clang
         </tt>
-        that came bundled with it to analyze your code. It is possible to change
-        Xcode's behavior to use an alternate version of
+        的版本来分析你的代码。当为了编译项目，继续使用Xcode绑定的
         <tt>
             clang
         </tt>
-        for this purpose while continuing to use the
+        ，是有可能通过替换
         <tt>
             clang
         </tt>
-        that came with Xcode for compiling projects.
+        的版本来改变Xcode的行为的。
     </p>
     <h3>
-        Why try open source builds?
+        为什么要尝试开源的build？
     </h3>
     <p>
-        The advantage of using open source analyzer builds (provided on this website)
-        is that they are often newer than the analyzer provided with Xcode, and
-        thus can contain bug fixes, new checks, or simply better analysis.
+        使用开源分析器（这个网站提供的）build的优点，是它总是可以比Xcode自身提供的更新，因此，可以包含修复bug，新的检测，或简单更好的分析。
     </p>
     <p>
-        On the other hand, new checks can be experimental, with results of variable
-        quality. Users are encouraged to
+        另一方面，新的检测可以用易变的质量的结果来进行实验。用户是被鼓励去
         <a href="http://clang-analyzer.llvm.org/filing_bugs.html">
-            file bug reports
+            归档bug报告
         </a>
-        (for any version of the analyzer) where they encounter false positives
-        or other issues.
+        （对于任何版本的分析器），无论他们遇到了错误的报告还是其它的问题。
     </p>
     <h3>
         set-xcode-analyzer
