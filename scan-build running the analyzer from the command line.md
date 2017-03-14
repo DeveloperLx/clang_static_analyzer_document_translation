@@ -745,36 +745,31 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         Analyzing iPhone Projects
     </h2>
     <p>
-        Conceptually Xcode projects for iPhone applications are nearly the same
-        as their cousins for desktop applications.
+    	概念上iPhone，应用和它的堂兄桌面应用几乎是一样的。
         <b>
             scan-build
         </b>
-        can analyze these projects as well, but users often encounter problems
-        with just building their iPhone projects from the command line because
-        there are a few extra preparative steps they need to take (e.g., setup
-        code signing).
+        也可以分析这些项目，但用户在命令行中build它们的iPhone项目时，经常会遇到问题，因为这一有一些预备的步骤必须要做（例如设置代码签名）。
     </p>
     <h3>
         Recommendation: use "Build and Analyze"
     </h3>
     <p>
-        The absolute easiest way to analyze iPhone projects is to use the
+    	分析iPhone项目绝对最容易的办法是使用Xcode的
         <a href="https://developer.apple.com/library/ios/recipes/xcode_help-source_editor/chapters/Analyze.html#//apple_ref/doc/uid/TP40009975-CH4-SW1">
             <i>
                 Analyze
             </i>
-            feature in Xcode
+            特性
         </a>
-        (which is based on the Clang Static Analyzer). There a user can analyze
-        their project right from a menu without most of the setup described later.
+        （它基于Clang的静态分析）。在这里用户可以在无需大多数以下描述的情况下，直接从菜单分析它们的项目。
     </p>
     <p>
+    	关于怎么使用开源的分析器的build来替换被打包在Xcode中的那个，指导在
         <a href="http://clang-analyzer.llvm.org/xcode.html">
-            Instructions are available
+            这个网址
         </a>
-        on this website on how to use open source builds of the analyzer as a
-        replacement for the one bundled with Xcode.
+        上。
     </p>
     <h3>
         Using scan-build directly
