@@ -826,9 +826,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
     </p>
     <pre class="code_example">$ scan-build xcodebuild -configuration Debug -sdk iphonesimulator2.2</pre>
     相应地，如果你的应用targets了iPhoneOS 3.0：
-    <pre class="code_example">
-        $ scan-build xcodebuild -configuration Debug -sdk iphonesimulator3.0
-    </pre>
+    <pre class="code_example">$ scan-build xcodebuild -configuration Debug -sdk iphonesimulator3.0</pre>
     <h3>
         Gotcha: using the right compiler
     </h3>
