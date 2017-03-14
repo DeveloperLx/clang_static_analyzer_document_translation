@@ -126,6 +126,18 @@
             </ul>
         </li>
         <li>
+            <a href="#recommendedguidelines">
+                debug分析器
+            </a>
+            <ul>
+                <li>
+                    <a href="#recommended_debug">
+                        它怎么工作
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
             <a href="#iphone">
                 分析iPhone项目
             </a>
@@ -631,13 +643,13 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         。
     </p>
   	<h2 id="Debugging">
-    Debugging the Analyzer
+    debug分析器
 </h2>
 <p>
     这个部分提供了关于debug分析器的信息，并在当你分析一个特定的项目遇到问题时解决它。
 </p>
 <h3>
-    How it Works
+    它怎么工作
 </h3>
 <p>
 	为了分析一个项目，
