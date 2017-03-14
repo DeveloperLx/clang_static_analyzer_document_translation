@@ -581,7 +581,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
     </p>
     <p>
         <b>
-            Example
+            例如
         </b>
     </p>
     <pre class="code_example">$ scan-build ./configure $ scan-build make</pre>
@@ -764,7 +764,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         也可以分析这些项目，但用户在命令行中build它们的iPhone项目时，经常会遇到问题，因为这一有一些预备的步骤必须要做（例如设置代码签名）。
     </p>
     <h3>
-        Recommendation: use "Build and Analyze"
+        推荐：使用"Build and Analyze"
     </h3>
     <p>
     	分析iPhone项目绝对最容易的办法是使用Xcode的
@@ -784,7 +784,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         上。
     </p>
     <h3>
-        Using scan-build directly
+        直接使用scan-build
     </h3>
     <p>
     	如果你想要在你的iPhone项目中使用
@@ -840,7 +840,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
     相应地，如果你的应用targets了iPhoneOS 3.0：
     <pre class="code_example">$ scan-build xcodebuild -configuration Debug -sdk iphonesimulator3.0</pre>
     <h3>
-        Gotcha: using the right compiler
+        明白（Gotcha）：使用正确的编译器
     </h3>
     <p>
     	回想一下，
