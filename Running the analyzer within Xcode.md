@@ -159,50 +159,54 @@
             <b>
                 --use-xcode-clang
             </b>
-            : Switch Xcode (back) to using the
+            ：切换Xcode（回）去使用
             <tt>
                 clang
             </tt>
-            that came bundled with it for static analysis.
+            捆绑的用来静态分析的
+            <tt>
+                clang
+            </tt>
+            。
         </li>
         <li>
             <b>
                 --use-checker-build
             </b>
-            : Switch Xcode to using the
+            ：切换为通过由指定的分析器build提供的
             <tt>
                 clang
             </tt>
-            provided by the specified analyzer build.
+            。
         </li>
     </ul>
     <h4>
-        Things to keep in mind
+        要记住的事
     </h4>
     <ul>
         <li>
-            You should quit Xcode prior to running
+            你应当优先运行
             <tt>
                 set-xcode-analyzer
             </tt>
-            .
+            来退出Xcode。
         </li>
         <li>
-            You will need to run
-            <tt>
-                set-xcode-analyzer
-            </tt>
-            under
+            为了获取写的权利来修改Xcode配置文件，你要在
             <b>
                 <tt>
                     sudo
                 </tt>
             </b>
-            in order to have write privileges to modify the Xcode configuration files.
+            下运行
+            <tt>
+                set-xcode-analyzer
+            </tt>
+            。
         </li>
     </ul>
     <h4>
-        Examples
+        例子
     </h4>
     <p>
         <b>
