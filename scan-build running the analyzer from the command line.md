@@ -574,68 +574,64 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
     </p>
     <pre class="code_example">$ scan-build ./configure $ scan-build make</pre>
     <p>
-        The reason
         <tt>
             configure
         </tt>
-        also needs to be run through
+        也需要通过
         <tt>
             scan-build
         </tt>
-        is because
+        来执行的原因是
         <tt>
             scan-build
         </tt>
-        scans your source files by
+        扫你的源文件是通过
         <i>
-            interposing
+            介入（interposing）
         </i>
-        on the compiler. This interposition is currently done by
+        编译器实现的。这个介入当前是通过
         <tt>
             scan-build
         </tt>
-        temporarily setting the environment variable
+        设置环境变量
         <tt>
             CC
         </tt>
-        to
+        到
         <tt>
             ccc-analyzer
         </tt>
-        . The program
+        实现的。
         <tt>
             ccc-analyzer
         </tt>
-        acts like a fake compiler, forwarding its command line arguments over
-        to the compiler to perform regular compilation and
+        程序扮演了一个假的编译器，转发编译器的命令行参数，去执行常规的编译和
         <tt>
             clang
         </tt>
-        to perform static analysis.
+        静态分析。
     </p>
     <p>
-        Running
+        运行
         <tt>
             configure
         </tt>
-        typically generates makefiles that have hardwired paths to the compiler,
-        and by running
-        <tt>
-            configure
-        </tt>
-        through
+        典型地生成makefile，它带有硬连线的（hardwired）到编译器的路径。通过
         <tt>
             scan-build
         </tt>
-        that path is set to
+        执行
+        <tt>
+            configure
+        </tt>
+        ，那个路径被设置为
         <tt>
             ccc-analyzer
         </tt>
-        .
+        。
     </p>
     <!-- <h2 id="Debugging">Debugging the Analyzer</h2>
-    <p>This section provides information on debugging the analyzer, and troubleshooting
-    it when you have problems analyzing a particular project.</p>
+    <p>This section provides information on debugging the analyzer, and troubleshooting it when you have problems analyzing a particular project.</p>
     <h3>How it Works</h3>
     <p>To analyze a project, <tt>scan-build</tt> simply sets the environment variable
     <tt>CC</tt> to the full path to <tt>ccc-analyzer</tt>. It also sets a few other
