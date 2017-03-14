@@ -173,32 +173,31 @@
             </tt>
             二进制程序（binary）的位置。
             <p>
-                For example, if you built a
+                例如，如果你build一个
                 <em>
                     Debug+Asserts
                 </em>
-                build of LLVM/Clang (the default), the resultant
+                的LLVM/Clang的build（默认的配置），合成的（resultant）
                 <tt>
                     clang
                 </tt>
-                binary will be in
+                二进制程序将在
                 <tt>
                     $(OBJDIR)/Debug+Asserts/bin
                 </tt>
-                (where
+                （
                 <tt>
                     $(OBJDIR)
                 </tt>
-                is often the same as the root source directory). You can also do
+                通常和根源的目录是相同的）。你也可以执行
                 <tt>
                     make install
                 </tt>
-                to install the LLVM/Clang libraries and binaries to the installation directory
-                of your choice (specified when you run
+                来安装LLVM/Clang库和二进制程序到你指定的安装目录下（当你运行
                 <tt>
                     configure
                 </tt>
-                ).
+                时被指定）。
             </p>
         </li>
         <li>
