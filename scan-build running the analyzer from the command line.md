@@ -775,62 +775,57 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         Using scan-build directly
     </h3>
     <p>
-        If you wish to use
+    	如果你想要在你的iPhone项目中使用
         <b>
             scan-build
         </b>
-        with your iPhone project, keep the following things in mind:
+        记住下列事项：
     </p>
     <ul>
         <li>
-            Analyze your project in the
+        	在
             <tt>
                 Debug
             </tt>
-            configuration, either by setting this as your configuration with Xcode
-            or by passing
+            配置下分析项目。既可以在Xcode中设置来作为你的配置，也可以传递参数
             <tt>
                 -configuration Debug
             </tt>
-            to
+            给
             <tt>
                 xcodebuild
             </tt>
-            .
+            。
         </li>
         <li>
-            Analyze your project using the
+        	使用
             <tt>
                 Simulator
             </tt>
-            as your base SDK. It is possible to analyze your code when targeting the
-            device, but this is much easier to do when using Xcode's
+            作为你的base SDK来分析项目。这样分析你的代码可能需要定位设备，但它会比使用Xcode的
             <i>
                 Build and Analyze
             </i>
-            feature.
+            特性更容易。
         </li>
         <li>
-            Check that your code signing SDK is set to the simulator SDK as well,
-            and make sure this option is set to
+        	还需要检查的你的代码签名SDK被设置为了模拟器的SDK，并确保这个选项被设置为
             <tt>
                 Don't Code Sign
             </tt>
-            .
+            。
         </li>
     </ul>
     <p>
-        Note that you can most of this without actually modifying your project.
-        For example, if your application targets iPhoneOS 2.2, you could run
+    	注意大部分情况下，你都不需要实际地修改你的项目。
+    	例如，如果你的应用targets了iPhoneOS 2.2，你可以在命令行中以下列形式执行
         <b>
             scan-build
         </b>
-        in the following manner from the command line:
+        ：
     </p>
-    <pre class="code_example">
-        $ scan-build xcodebuild -configuration Debug -sdk iphonesimulator2.2
-    </pre>
-    Alternatively, if your application targets iPhoneOS 3.0:
+    <pre class="code_example">$ scan-build xcodebuild -configuration Debug -sdk iphonesimulator2.2</pre>
+    相应地，如果你的应用targets了iPhoneOS 3.0：
     <pre class="code_example">
         $ scan-build xcodebuild -configuration Debug -sdk iphonesimulator3.0
     </pre>
