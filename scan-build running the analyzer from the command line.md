@@ -460,48 +460,45 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         Output of scan-build
     </h3>
     <p>
-        The output of scan-build is a set of HTML files, each one which represents
-        a separate bug report. A single
+    	scan-build的输出是一整套的HTML文件，每个都代表一个单独的bug报告。一个单独的
         <tt>
             index.html
         </tt>
-        file is generated for surveying all of the bugs. You can then just open
+        文件是用来考察全部的bug的。你可以在浏览器中只打开
         <tt>
             index.html
         </tt>
-        in a web browser to view the bug reports.
+        来查看bug报告。
     </p>
     <p>
-        Where the HTML files are generated is specified with a
-        <b>
-            -o
-        </b>
-        option to
-        <tt>
+    	<tt>
             scan-build
         </tt>
-        . If
+        在哪里生成HTML文件可以由        
         <b>
             -o
         </b>
-        isn't specified, a directory in
+        选项来确定。如果未指定
+        <b>
+            -o
+        </b>
+        选项，则会在
         <tt>
             /tmp
         </tt>
-        is created to store the files (
+        中创建一个目录来储存文件（
         <tt>
             scan-build
         </tt>
-        will print a message telling you where they are). If you want to view
-        the reports immediately after the build completes, pass
+        会打印一条信息来告诉你这个路径）。如果你想在build完成后直接查看报告，传递
         <b>
             -V
         </b>
-        to
+        选项给
         <tt>
             scan-build
         </tt>
-        .
+        。
     </p>
     <h2 id="recommendedguidelines">
         Recommended Usage Guidelines
