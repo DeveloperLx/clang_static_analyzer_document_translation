@@ -127,53 +127,51 @@
         。
     </p>
     <p>
-        To run
+        为了运行
         <tt>
             scan-build
         </tt>
-        , either add the
+        ，请添加
         <b>
             <tt>
                 checker-XXX
             </tt>
         </b>
-        directory to your path or specify a complete path for
+        目录到你的path中，或在运行时为
         <tt>
             scan-build
         </tt>
-        when running it. It is also possible to use a symbolic link to
+        指定一个完整的路径。也可以使用一个符号连接（symbolic link）到
         <tt>
             scan-build
         </tt>
-        , such one located in a directory in your path. When
+        ，它会定位到在你path中的一个目录。当
         <tt>
             scan-build
         </tt>
-        runs it will automatically determine where to find its accompanying files.
+        运行时，它会自动确定从哪里找到它相应（accompanying）的文件。
     </p>
     <h2 id="OtherPlatforms">
-        Other Platforms (Building the Analyzer from Source)
+        其它平台（从源码构建分析器）
     </h2>
     <p>
-        For other platforms, you must build Clang and LLVM manually. To do so,
-        please follow the instructions for
+        对于其它平台，你必须手动地build Clang和LLVM。为了这么做，请跟随说明
         <a href="http://clang.llvm.org/get_started.html#build">
-            building Clang from source code
+            从源码build Clang
         </a>
-        .
+        。
     </p>
     <p>
     </p>
     <p>
-        Once the Clang is built, you need to add the following to your path:
+        一旦Clang被build，你需要添加下列内容到你的path中：
     </p>
     <ul>
         <li>
-            The location of the
             <tt>
                 clang
             </tt>
-            binary.
+            二进制程序（binary）的位置。
             <p>
                 For example, if you built a
                 <em>
@@ -204,21 +202,20 @@
             </p>
         </li>
         <li>
-            The locations of the
             <tt>
                 scan-build
             </tt>
-            and
+            和
             <tt>
                 scan-view
             </tt>
-            programs.
+            程序的位置。
             <p>
-                These are installed via
+                当clang build时，这些通过
                 <tt>
                     make install
                 </tt>
-                into the bin directory when clang is built.
+                命令被安装得到二进制目录。
             </p>
         </li>
     </ul>

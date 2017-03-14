@@ -61,7 +61,7 @@
                                     	这个包即可用于命令行，亦可用在Xcode中
                                     </li>
                                     <li>
-                                        <a href="http://clang-analyzer.llvm.org/installation.html">
+                                        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/Obtaining%20the%20Static%20Analyzer.md">
                                             安装
                                         </a>
                                         和
