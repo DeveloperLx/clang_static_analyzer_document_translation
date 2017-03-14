@@ -20,7 +20,7 @@
                             单独的工具
                         </a>
                         ，也可以
-                        <a href="http://clang-analyzer.llvm.org/xcode.html">
+                        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/Running%20the%20analyzer%20within%20Xcode.md">
                         	嵌入到Xcode中
                         </a>
                         。单的工程是由命令行调用的，它会基于一个代码库的build，串行地运行。
@@ -81,7 +81,7 @@
                                 </h3>
                                 <p>
                                     对于其它平台，请跟随
-                                    <a href="http://clang-analyzer.llvm.org/installation#OtherPlatforms">
+                                    <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/Obtaining%20the%20Static%20Analyzer.md">
                                         说明
                                     </a>
                                     从源码来build分析器。

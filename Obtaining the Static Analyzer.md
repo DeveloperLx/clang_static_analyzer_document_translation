@@ -6,19 +6,18 @@
         获取静态分析器
     </h1>
     <p>
-        This page describes how to download and install the analyzer. Once the
-        analyzer is installed, follow the
+        这页描述了怎么去下载和安装分析器。一旦分析器安装上了，跟随
         <a href="http://clang-analyzer.llvm.org/scan-build.html">
-            instructions
+            说明
         </a>
-        on using
+        来使用
         <tt>
             scan-build
         </tt>
-        to get started analyzing your code.
+        去启动分析你的代码。
     </p>
     <h2>
-        Packaged Builds (Mac OS X)
+        打包build（Mac OS X）
     </h2>
     <p>
         Semi-regular pre-built binaries of the analyzer are available on Mac OS
@@ -45,7 +44,7 @@
         .
     </p>
     <h3>
-        Using Packaged Builds
+        使用打包builds
     </h3>
     <p>
         To use a package build, simply unpack it anywhere. If the build archive
