@@ -78,61 +78,61 @@
     <ul>
         <li>
             <a href="#scanbuild">
-                Getting Started
+                开始吧！
             </a>
             <ul>
                 <li>
                     <a href="#scanbuild_basicusage">
-                        Basic Usage
+                        基本用法
                     </a>
                 </li>
                 <li>
                     <a href="#scanbuild_forwindowsusers">
-                        For Windows Users
+                        对于Windows用户
                     </a>
                 </li>
                 <li>
                     <a href="#scanbuild_otheroptions">
-                        Other Options
+                        其它选项
                     </a>
                 </li>
                 <li>
                     <a href="#scanbuild_output">
-                        Output of scan-build
+                        scan-build的输出
                     </a>
                 </li>
             </ul>
         </li>
         <li>
             <a href="#recommendedguidelines">
-                Recommended Usage Guidelines
+                推荐的用法参考
             </a>
             <ul>
                 <li>
                     <a href="#recommended_debug">
-                        Always Analyze a Project in its "Debug" Configuration
+                        永远使用“Debug”配置来分析项目
                     </a>
                 </li>
                 <li>
                     <a href="#recommended_verbose">
-                        Use Verbose Output when Debugging scan-build
+                        在debug scan-build时使用详细的输出
                     </a>
                 </li>
                 <li>
                     <a href="#recommended_autoconf">
-                        Run './configure' through scan-build
+                        通过scan-build来执行'./configure' 
                     </a>
                 </li>
             </ul>
         </li>
         <li>
             <a href="#iphone">
-                Analyzing iPhone Projects
+                分析iPhone项目
             </a>
         </li>
     </ul>
     <h2 id="scanbuild">
-        Getting Started
+        开始吧！
     </h2>
     <p>
         <tt>
@@ -157,7 +157,7 @@
         编译的源文件。同时这也意味着任何没有被编译的文件也不会被分析。
     </p>
     <h3 id="scanbuild_basicusage">
-        Basic Usage
+        基本用法
     </h3>
     <p>
         <tt>
@@ -251,7 +251,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         文件。
     </p>
     <h3 id="scanbuild_forwindowsusers">
-        For Windows Users
+        对于Windows用户
     </h3>
     <p>
         Windows用户必须安装了Perl，才能使用scan-build。
@@ -308,7 +308,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         </li>
     </ul>
     <h3 id="scanbuild_otheroptions">
-        Other Options
+        其它选项
     </h3>
     <p>
         正如上面提到的，额外的选项可以传递给
@@ -457,7 +457,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         可以获得完整的选项列表。
     </p>
     <h3 id="scanbuild_output">
-        Output of scan-build
+        scan-build的输出
     </h3>
     <p>
     	scan-build的输出是一整套的HTML文件，每个都代表一个单独的bug报告。一个单独的
@@ -501,13 +501,13 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         。
     </p>
     <h2 id="recommendedguidelines">
-        Recommended Usage Guidelines
+        推荐的用法参考
     </h2>
     <p>
     	这一部分描述几条运行分析器时的建议。
     </p>
     <h3 id="recommended_debug">
-        ALWAYS analyze a project in its "debug" configuration
+        永远使用“Debug”配置来分析项目
     </h3>
     <p>
     	大多数项目可以build在“debug”模式下，它会打开断言。断言会被静态分析器捡起来减少不可实行的路径，在一些情形下可以很大程度低减少这个工具给出的错误报告（假的（bogus）错误报告）的数量。
@@ -528,7 +528,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         ，它会自动地打开断言。
     </p>
     <h3 id="recommend_verbose">
-        Use verbose output when debugging scan-build
+        在debug scan-build时使用详细的输出
     </h3>
     <p>
     	使用
@@ -550,7 +550,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         的输出到一个文本文件（确保重定向标准错误）对于归档bug报告是非常有用的，这样我们就可以看到传递给分析器的准确的选项（和文件）。为了让日志更容易理解，不要执行并行的build。
     </p>
     <h3 id="recommended_autoconf">
-        Run './configure' through scan-build
+        通过scan-build来执行'./configure' 
     </h3>
     <p>
     	如果一个被分析的工程使用autoconf生成了
@@ -742,7 +742,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         </tt>
         ，但这是有可能无法完美地工作的（对于这种情况请报告bug）。
     <h2 id="iphone">
-        Analyzing iPhone Projects
+        分析iPhone项目
     </h2>
     <p>
     	概念上iPhone，应用和它的堂兄桌面应用几乎是一样的。
