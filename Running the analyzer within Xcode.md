@@ -92,7 +92,6 @@
     </h2>
     <p>
         默认地，Xcode使用绑定的
-        By default, Xcode uses the version of
         <tt>
             clang
         </tt>
@@ -123,16 +122,15 @@
         set-xcode-analyzer
     </h3>
     <p>
-        Starting with analyzer build checker-234, analyzer builds contain a command
-        line utility called
+        从分析器build checker-234开始，分析器的build包含一个叫做
         <tt>
             set-xcode-analyzer
         </tt>
-        that allows users to change what copy of
+        的命令行工具，让用户可以改变Xcode用来分析的
         <tt>
             clang
         </tt>
-        that Xcode uses for analysis:
+        的副本：
     </p>
     <pre class="code_example">$ <b>set-xcode-analyzer -h</b>
 Usage: set-xcode-analyzer [options]
