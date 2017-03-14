@@ -510,75 +510,69 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         ALWAYS analyze a project in its "debug" configuration
     </h3>
     <p>
-        Most projects can be built in a "debug" mode that enables assertions.
-        Assertions are picked up by the static analyzer to prune infeasible paths,
-        which in some cases can greatly reduce the number of false positives (bogus
-        error reports) emitted by the tool.
+    	大多数项目可以build在“debug”模式下，它会打开断言。断言会被静态分析器捡起来减少不可实行的路径，在一些情形下可以很大程度低减少这个工具给出的错误报告（假的（bogus）错误报告）的数量。
     </p>
     <p>
-        Another option is to use
+    	另一个选项是使用
+    	<b>
+            scan-build
+        </b>
+        工具的
         <tt>
             --force-analyze-debug-code
         </tt>
-        flag of
+        标记
         <b>
             scan-build
         </b>
-        tool which would enable assertions automatically.
+        ，它会自动地打开断言。
     </p>
     <h3 id="recommend_verbose">
         Use verbose output when debugging scan-build
     </h3>
     <p>
-        <tt>
-            scan-build
-        </tt>
-        takes a
+    	使用
         <b>
             -v
         </b>
-        option to emit verbose output about what it's doing; two
+        选项，
+        <tt>
+            scan-build
+        </tt>
+        会给出关于它正在做什么的详细的输出；两个
         <b>
             -v
         </b>
-        options emit more information. Redirecting the output of
+        选项就会给出更多的信息。重定向
         <tt>
             scan-build
         </tt>
-        to a text file (make sure to redirect standard error) is useful for filing
-        bug reports against
-        <tt>
-            scan-build
-        </tt>
-        or the analyzer, as we can see the exact options (and files) passed to
-        the analyzer. For more comprehensible logs, don't perform a parallel build.
+        的输出到一个文本文件（确保重定向标准错误）对于归档bug报告是非常有用的，这样我们就可以看到传递给分析器的准确的选项（和文件）。为了让日志更容易理解，不要执行并行的build。
     </p>
     <h3 id="recommended_autoconf">
         Run './configure' through scan-build
     </h3>
     <p>
-        If an analyzed project uses an autoconf generated
+    	如果一个被分析的工程使用autoconf生成了
         <tt>
             configure
         </tt>
-        script, you will probably need to run
-        <tt>
-            configure
-        </tt>
-        script through
+        脚本，为了分析工程，你或许需要通过
         <tt>
             scan-build
         </tt>
-        in order to analyze the project.
+        运行
+        <tt>
+            configure
+        </tt>
+        脚本。
     </p>
     <p>
         <b>
             Example
         </b>
     </p>
-    <pre class="code_example">
-        $ scan-build ./configure $ scan-build make
-    </pre>
+    <pre class="code_example">$ scan-build ./configure $ scan-build make</pre>
     <p>
         The reason
         <tt>
