@@ -154,7 +154,7 @@
     </h2>
     <p>
         对于其它平台，你必须手动地build Clang和LLVM。请跟随说明
-        <a href="http://clang.llvm.org/get_started.html#build">
+        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/Getting%20Started%20Building%20and%20Running%20Clang.md">
             从源码build Clang
         </a>
         来这么做。

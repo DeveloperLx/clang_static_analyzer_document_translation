@@ -2,31 +2,28 @@
 
 <div id="content">
     <h1>
-        Getting Started: Building and Running Clang
+        开始：build和执行Clang
     </h1>
     <p>
-        This page gives you the shortest path to checking out Clang and demos
-        a few options. This should get you up and running with the minimum of muss
-        and fuss. If you like what you see, please consider
-        <a href="get_involved.html">
+        本篇将给你最短的路径来检查（check out）Clang并演示一些选项。这需要打起精神来（get you up），并以最小的混乱（muss）和烦躁（fuss）来执行。如果你喜欢你看到的，请考虑
+        <a href="http://clang.llvm.org/get_involved.html">
             getting involved
         </a>
-        with the Clang community. If you run into problems, please file bugs in
+        和clang社区。如果你撞到了问题，请归档问题到
         <a href="http://llvm.org/bugs/">
             LLVM Bugzilla
         </a>
-        .
+        。
     </p>
     <h2 id="download">
-        Release Clang Versions
+        Clang版本发布
     </h2>
     <p>
-        Clang is released as part of regular LLVM releases. You can download the
-        release versions from
+        Clang是作为常规LLVM发布的一部分进行发布的。你可以从
         <a href="http://llvm.org/releases/">
             http://llvm.org/releases/
         </a>
-        .
+        下载发布的版本。
     </p>
     <p>
         Clang is also provided in all major BSD or GNU/Linux distributions as
