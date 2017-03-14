@@ -210,12 +210,12 @@
     </h4>
     <p>
         <b>
-            Example 1
+            例子 1
         </b>
-        : Telling Xcode to use checker-235:
+        ：告诉Xcode去使用checker-235：
     </p>
     <pre class="code_example">$ <b>set-xcode-analyzer -h</b>
-Usage: set-xcode-analyzer [options]
+用法：set-xcode-analyzer [options]
 
 Options:
   -h, --help            show this help message and exit
@@ -225,33 +225,32 @@ Options:
   --use-xcode-clang     Use the Clang bundled with Xcode
 </pre>
     <p>
-        Note that you typically won't install an analyzer build in
+        注意你典型地不会安装一个分析器build到
         <tt>
             /tmp
         </tt>
-        , but the point of this example is that
+        目录，但是这个例子的要点是
         <tt>
             set-xcode-analyzer
         </tt>
-        just wants a full path to an untarred analyzer build.
+        只想要一个指向已解压的分析器build的全路径。
     </p>
     <p>
         <b>
-            Example 2
+            例子 2
         </b>
-        : Telling Xcode to use a very specific version of
+        ：告诉Xcode使用一个非常特定版本的
         <tt>
             clang
         </tt>
-        :
+        ：
     </p>
-    <pre class="code_example">$ sudo set-xcode-analyzer --use-checker-build=~/mycrazyclangbuild/bin/clang
-</pre>
+    <pre class="code_example">$ sudo set-xcode-analyzer --use-checker-build=~/mycrazyclangbuild/bin/clang</pre>
     <p>
         <b>
-            Example 3
+            例子 3
         </b>
-        : Resetting Xcode to its default behavior:
+        ：重置Xcode到它的默认行为：
     </p>
     <pre class="code_example">$ sudo set-xcode-analyzer --use-xcode-clang</pre>
 </div>
