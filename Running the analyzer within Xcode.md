@@ -74,21 +74,21 @@
         </li>
     </ul>
     <h2>
-        Getting Started
+        开始吧！
     </h2>
     <p>
-        Xcode is available as a free download from Apple on the
+        Xcode可以从苹果的
         <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">
             Mac App Store
         </a>
-        , with
+        免费下载，参考
         <a href="https://developer.apple.com/library/ios/recipes/xcode_help-source_editor/chapters/Analyze.html#//apple_ref/doc/uid/TP40009975-CH4-SW1">
-            instructions available
+            可用的说明
         </a>
-        for using the analyzer.
+        来使用分析器。
     </p>
     <h2>
-        Using open source analyzer builds with Xcode
+        在Xcode中使用开源的分析器build
     </h2>
     <p>
         By default, Xcode uses the version of
