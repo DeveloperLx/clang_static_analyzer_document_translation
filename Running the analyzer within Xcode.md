@@ -10,27 +10,26 @@
             <tr>
                 <td>
                     <h3>
-                        What is it?
+                        这是什么？
                     </h3>
                     <p>
-                        Since Xcode 3.2, users have been able to run the Clang Static Analyzer
+                        从Xcode3.2起，用户就可以直接在Xcode中运行Clang静态分析器了（
                         <a href="https://developer.apple.com/library/ios/recipes/xcode_help-source_editor/chapters/Analyze.html#//apple_ref/doc/uid/TP40009975-CH4-SW1">
-                            directly within Xcode
+                            官方文档
                         </a>
-                        .
+                        ）。
                     </p>
                     <p>
-                        It integrates directly with the Xcode build system and presents analysis
-                        results directly within Xcode's editor.
+                        它直接与Xcode的build系统整合，并直接在Xcode的编辑器中展示分析结果。
                     </p>
                     <h3>
-                        Can I use the open source analyzer builds with Xcode?
+                        我是否可以在Xcode中使用开源的分析器build？
                     </h3>
                     <p>
                         <b>
-                            Yes
+                            是的
                         </b>
-                        . Instructions are included below.
+                        。说明就包含在下面。
                     </p>
                 </td>
                 <td style="padding-left:10px; text-align:center">
@@ -39,35 +38,33 @@
                     </a>
                     <br>
                     <b>
-                        Viewing static analyzer results in Xcode
+                        在Xcode中查看静态分析的结果
                     </b>
                 </td>
             </tr>
         </tbody>
     </table>
     <h3>
-        Key features:
+        关键特性：
     </h3>
     <ul>
         <li>
             <b>
-                Integrated workflow:
+                整合工作流：
             </b>
-            Results are integrated within Xcode. There is no experience of using a
-            separate tool, and activating the analyzer requires a single keystroke
-            or mouse click.
+            结果被整合在Xcode中。这里没有使用单独的工具的经验，并且激活分析器需要一个单一的按键或鼠标点击。
         </li>
         <li>
             <b>
-                Transparency:
+                透明度：
             </b>
-            Works effortlessly with Xcode projects (including iPhone projects).
+            轻松地（effortlessly）与Xcode项目工作（包括iPhone项目）。
         </li>
         <li>
             <b>
-                Cons:
+                缺点（Cons）：
             </b>
-            Doesn't work well with non-Xcode projects. For those, consider using
+            不能在非Xcode的项目上很好地工作。对于那些，考虑使用
             <a href="http://clang-analyzer.llvm.org/scan-build.html">
                 <b>
                     scan-build
