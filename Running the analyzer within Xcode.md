@@ -214,15 +214,10 @@
         </b>
         ：告诉Xcode去使用checker-235：
     </p>
-    <pre class="code_example">$ <b>set-xcode-analyzer -h</b>
-用法：set-xcode-analyzer [options]
-
-Options:
-  -h, --help            show this help message and exit
-  --use-checker-build=PATH
-                        Use the Clang located at the provided absolute path,
-                        e.g. /Users/foo/checker-1
-  --use-xcode-clang     Use the Clang bundled with Xcode
+    <pre class="code_example">$ pwd
+/tmp
+$ tar xjf checker-235.tar.bz2
+$ sudo checker-235/set-xcode-analyzer --use-checker-build=/tmp/checker-235
 </pre>
     <p>
         注意你典型地不会安装一个分析器build到
