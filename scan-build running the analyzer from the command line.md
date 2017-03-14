@@ -630,34 +630,120 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         </tt>
         。
     </p>
-    <!-- <h2 id="Debugging">Debugging the Analyzer</h2>
-    <p>This section provides information on debugging the analyzer, and troubleshooting it when you have problems analyzing a particular project.</p>
-    <h3>How it Works</h3>
-    <p>To analyze a project, <tt>scan-build</tt> simply sets the environment variable
-    <tt>CC</tt> to the full path to <tt>ccc-analyzer</tt>. It also sets a few other
-    environment variables to communicate to <tt>ccc-analyzer</tt> where to dump HTML
-    report files.</p>
-    <p>Some Makefiles (or equivalent project files) hardcode the compiler; for such
-    projects simply overriding <tt>CC</tt> won't cause <tt>ccc-analyzer</tt> to be
-    called. This will cause the compiled code <b>to not be analyzed.</b></p> If you
-    find that your code isn't being analyzed, check to see if <tt>CC</tt> is
-    hardcoded. If this is the case, you can hardcode it instead to the <b>full
-    path</b> to <tt>ccc-analyzer</tt>.</p>
-    <p>When applicable, you can also run <tt>./configure</tt> for a project through
-    <tt>scan-build</tt> so that configure sets up the location of <tt>CC</tt> based
-    on the environment passed in from <tt>scan-build</tt>:
-    <pre>
-    $ scan-build <b>./configure</b>
-    </pre>
-    <p><tt>scan-build</tt> has special knowledge about <tt>configure</tt>, so it in
-    most cases will not actually analyze the configure tests run by
-    <tt>configure</tt>.</p>
-    <p>Under the hood, <tt>ccc-analyzer</tt> directly invokes <tt>gcc</tt> to
-    compile the actual code in addition to running the analyzer (which occurs by it
-    calling <tt>clang</tt>). <tt>ccc-analyzer</tt> tries to correctly forward all
-    the arguments over to <tt>gcc</tt>, but this may not work perfectly (please
-    report bugs of this kind).
-    -->
+  	<h2 id="Debugging">
+    Debugging the Analyzer
+</h2>
+<p>
+    这个部分提供了关于debug分析器的信息，并在当你分析一个特定的项目遇到问题时解决它。
+</p>
+<h3>
+    How it Works
+</h3>
+<p>
+	为了分析一个项目，
+    <tt>
+        scan-build
+    </tt>
+    simply sets the environment variable
+    <tt>
+        CC
+    </tt>
+    to the full path to
+    <tt>
+        ccc-analyzer
+    </tt>
+    . It also sets a few other environment variables to communicate to
+    <tt>
+        ccc-analyzer
+    </tt>
+    where to dump HTML report files.
+</p>
+<p>
+    Some Makefiles (or equivalent project files) hardcode the compiler; for
+    such projects simply overriding
+    <tt>
+        CC
+    </tt>
+    won't cause
+    <tt>
+        ccc-analyzer
+    </tt>
+    to be called. This will cause the compiled code
+    <b>
+        to not be analyzed.
+    </b>
+</p>
+If you find that your code isn't being analyzed, check to see if
+<tt>
+    CC
+</tt>
+is hardcoded. If this is the case, you can hardcode it instead to the
+<b>
+    full path
+</b>
+to
+<tt>
+    ccc-analyzer
+</tt>
+.
+</p>
+<p>
+    When applicable, you can also run
+    <tt>
+        ./configure
+    </tt>
+    for a project through
+    <tt>
+        scan-build
+    </tt>
+    so that configure sets up the location of
+    <tt>
+        CC
+    </tt>
+    based on the environment passed in from
+    <tt>
+        scan-build
+    </tt>
+    :
+    <pre>$ scan-build <b>./configure</b></pre>
+    <p>
+        <tt>
+            scan-build
+        </tt>
+        has special knowledge about
+        <tt>
+            configure
+        </tt>
+        , so it in most cases will not actually analyze the configure tests run
+        by
+        <tt>
+            configure
+        </tt>
+        .
+    </p>
+    <p>
+        Under the hood,
+        <tt>
+            ccc-analyzer
+        </tt>
+        directly invokes
+        <tt>
+            gcc
+        </tt>
+        to compile the actual code in addition to running the analyzer (which
+        occurs by it calling
+        <tt>
+            clang
+        </tt>
+        ).
+        <tt>
+            ccc-analyzer
+        </tt>
+        tries to correctly forward all the arguments over to
+        <tt>
+            gcc
+        </tt>
+        , but this may not work perfectly (please report bugs of this kind).
     <h2 id="iphone">
         Analyzing iPhone Projects
     </h2>
