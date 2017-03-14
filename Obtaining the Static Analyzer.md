@@ -1,13 +1,12 @@
 #### [原文地址](http://clang-analyzer.llvm.org/installation) 翻译：[DeveloperLx](http://weibo.com/DeveloperLx)
 
-
 <div id="content">
     <h1>
         获取静态分析器
     </h1>
     <p>
         本篇描述了怎么去下载和安装分析器。安好分析器之后，跟随
-        <a href="http://clang-analyzer.llvm.org/scan-build.html">
+        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/scan-build%20running%20the%20analyzer%20from%20the%20command%20line.md">
             说明
         </a>
         来使用
@@ -120,7 +119,7 @@
             scan-build
         </tt>
         的
-        <a href="http://clang-analyzer.llvm.org/scan-build">
+        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/scan-build%20running%20the%20analyzer%20from%20the%20command%20line.md">
             文档
         </a>
         。
