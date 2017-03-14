@@ -831,82 +831,72 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         Gotcha: using the right compiler
     </h3>
     <p>
-        Recall that
+    	回想一下，
         <b>
             scan-build
         </b>
-        analyzes your project by using a compiler to compile the project and
+        通过使用一个编译器来编译项目，用
         <tt>
             clang
         </tt>
-        to analyze your project. The script uses simple heuristics to determine
-        which compiler should be used (it defaults to
+        来分析项目，实现分析项目的效果。这个脚本使用简单的试探法（heuristics）来确定该使用哪个编译器（默认在Darwin上是
         <tt>
             clang
         </tt>
-        on Darwin and
+        在其它平台上则是
         <tt>
             gcc
         </tt>
-        on other platforms). When analyzing iPhone projects,
+        ）。当分析iPhone项目的时候，
         <b>
             scan-build
         </b>
-        may pick the wrong compiler than the one Xcode would use to build your
-        project. For example, this could be because multiple versions of a compiler
-        may be installed on your system, especially if you are developing for the
-        iPhone.
+        可能会选取错误的编译器，没有选择Xcode用来build你的项目的那个。例如，可能在你的系统上装有多个版本的编译器，尤其在你要开发iPhone的时候。
     </p>
     <p>
-        When compiling your application to run on the simulator, it is important
-        that
+    	当编译你的应用去运行在模拟器上的时候，让
         <b>
             scan-build
         </b>
-        finds the correct version of
+        找到正确版本的
         <tt>
             gcc/clang
         </tt>
-        . Otherwise, you may see strange build errors that only happen when you
-        run
+        是非常重要的。否则，你就可能会看到奇怪的build错误当且仅当你执行
         <tt>
             scan-build
         </tt>
-        .
+        的时候。
     </p>
     <p>
         <b>
             scan-build
         </b>
+        提供了
         provides the
         <tt>
             --use-cc
         </tt>
         and
+        和
         <tt>
             --use-c++
         </tt>
-        options to hardwire which compiler scan-build should use for building
-        your code. Note that although you are chiefly interested in analyzing your
-        project, keep in mind that running the analyzer is intimately tied to the
-        build, and not being able to compile your code means it won't get fully
-        analyzed (if at all).
+        选项来强制选择（hardwire）scan-build用来build你代码的编译器。注意，尽管你的兴趣主要在分析你的项目上，记住运行分析器是和build密切相关的，如果不能编译你的代码，也就意味着无法得到完整的分析。
     </p>
     <p>
-        If you aren't certain which compiler Xcode uses to build your project,
-        try just running
+    	如果你不能确定Xcod是用哪个编译器来build你的项目，尝试运行
         <tt>
             xcodebuild
         </tt>
-        (without
+        （不要
         <b>
             scan-build
         </b>
-        ). You should see the full path to the compiler that Xcode is using, and
-        use that as an argument to
+        ）。你应该就看到Xcode正在用的那个编译器的全路径了，使用它来作为
         <tt>
             --use-cc
         </tt>
-        .
+        的参数。
     </p>
 </div>
