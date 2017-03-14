@@ -6,7 +6,7 @@
         获取静态分析器
     </h1>
     <p>
-        这页描述了怎么去下载和安装分析器。一旦分析器安装上了，跟随
+        本篇描述了怎么去下载和安装分析器。安好分析器之后，跟随
         <a href="http://clang-analyzer.llvm.org/scan-build.html">
             说明
         </a>
@@ -14,13 +14,13 @@
         <tt>
             scan-build
         </tt>
-        去启动分析你的代码。
+        启动分析你的代码。
     </p>
     <h2>
         打包build（Mac OS X）
     </h2>
     <p>
-        这个分析器半正则（Semi-regular）、预建的（pre-built）二进制文件（binaries）在Mac OS上可用。这些被build去执行在OS X 10.7和之后的版本上。
+        这个分析器的半正则（Semi-regular）、预建（pre-built）的二进制文件（binaries）是在Mac OS上可用的。这些被build执行在OS X 10.7和之后的版本上。
     </p>
     <p>
         Build会频繁地发布。通常在不同的build号之间会有一些bug的修复或小幅的特性提升。当使用分析器的时候，我们推荐你偶尔地回来检查一下新的build，尤其你使用的build已经过了有几周的时间。
@@ -30,7 +30,7 @@
         <!--#include virtual="latest_checker.html.incl"-->
     </p>
     <p>
-        对于其它平台的打包builds可能会在最后提供，但我们需要有意愿提供这样常规的build的志愿者。如果你希望帮助提供在其它平台上的分析器的常规的的build，请发邮件到
+        对于其它平台的打包builds可能最后会提供，但我们需要有意愿提供这种常规build的志愿者。如果你希望帮助提供在其它平台上分析器的常规的的build，请发邮件到
         <a href="http://lists.llvm.org/mailman/listinfo/cfe-dev">
             Clang Developers' mailing list
         </a>
@@ -40,29 +40,28 @@
         使用打包builds
     </h3>
     <p>
-        为了使用打包的build，在任意位置解包它即可。如果这个build存档的名字为
+        为了使用打包的build，在任意位置解包（unpack）它即可。如果这个build存档的名为
         <b>
             <tt>
                 checker-XXX.tar.bz2
             </tt>
         </b>
-        ，之后这个归档将扩展为一个名叫
+        ，之后这个归档将扩展成一个名叫
         <b>
             <tt>
                 checker-XXX
             </tt>
         </b>
-        的目录。你不需要放置这个目录或目录中的内容到特定的地方。卸载这个分析器就像删除这个目录一样地简单。
+        的目录。你不需要将这个目录或目录中的内容放置到特定的地方。卸载这个分析器就像删除这个目录一样得简单。
     </p>
     <p>
         在
-        Most of the files in the
         <b>
             <tt>
                 checker-XXX
             </tt>
         </b>
-        目录中的大多数文件将是分析器的支持文件，你可以简单地忽略掉它们。大多数用户只需关心两个文件，它们在
+        目录中的大多数文件都是分析器的支持文件，你可以简单地忽略掉它们。大多用户仅需关心两个文件，它们在
         <b>
             <tt>
                 checker-XXX
@@ -79,7 +78,7 @@
             <tt>
                 scan-build
             </tt>
-            是一个执行分析器的高级的命令行工具
+            是一个执行分析器的高级命令行工具
         </li>
         <li>
             <b>
@@ -101,7 +100,7 @@
             <tt>
                 scan-build
             </tt>
-            的选项，它使得当一个build的分析完成时，立刻执行
+            的选项，使得当一个build的分析完成时，立刻执行
             <tt>
                 scan-view
             </tt>
@@ -112,7 +111,7 @@
         执行scan-build
     </h4>
     <p>
-        对于使用
+        关于使用
         <tt>
             scan-build
         </tt>
@@ -137,7 +136,7 @@
                 checker-XXX
             </tt>
         </b>
-        目录到你的path中，或在运行时为
+        目录到你的path中，或在运行时，为
         <tt>
             scan-build
         </tt>
@@ -155,11 +154,11 @@
         其它平台（从源码构建分析器）
     </h2>
     <p>
-        对于其它平台，你必须手动地build Clang和LLVM。为了这么做，请跟随说明
+        对于其它平台，你必须手动地build Clang和LLVM。请跟随说明
         <a href="http://clang.llvm.org/get_started.html#build">
             从源码build Clang
         </a>
-        。
+        来这么做。
     </p>
     <p>
     </p>
@@ -177,7 +176,7 @@
                 <em>
                     Debug+Asserts
                 </em>
-                的LLVM/Clang的build（默认的配置），合成的（resultant）
+                的LLVM/Clang的build（默认的配置），则合成的（resultant）
                 <tt>
                     clang
                 </tt>
@@ -189,11 +188,11 @@
                 <tt>
                     $(OBJDIR)
                 </tt>
-                通常和根源的目录是相同的）。你也可以执行
+                通常和根源的目录是相同的）目录下。你也可以执行
                 <tt>
                     make install
                 </tt>
-                来安装LLVM/Clang库和二进制程序到你指定的安装目录下（当你运行
+                ，来安装LLVM/Clang库和二进制程序到你指定的目录下（当你运行
                 <tt>
                     configure
                 </tt>
@@ -210,11 +209,11 @@
             </tt>
             程序的位置。
             <p>
-                当clang build时，这些通过
+                当build clang时，这些通过
                 <tt>
                     make install
                 </tt>
-                命令被安装得到二进制目录。
+                命令被安装到二进制目录。
             </p>
         </li>
     </ul>
