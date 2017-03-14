@@ -26,15 +26,13 @@
         下载发布的版本。
     </p>
     <p>
-        Clang is also provided in all major BSD or GNU/Linux distributions as
-        part of their respective packaging systems. From Xcode 4.2, Clang is the
-        default compiler for Mac OS X.
+        Clang也在全部主要的BSD或GNU/Linux的发布版中有提供，作为它们相应的包系统（packaging systems）的一部分。对于Xcode 4.2，Clang是Mac OS X默认的编译器。
     </p>
     <h2 id="build">
-        Building Clang and Working with the Code
+        build clang并与代码一起工作
     </h2>
     <h3 id="buildNix">
-        On Unix-like Systems
+        在类Unix系统上
     </h3>
     <p>
         Note: as an experimental setup, you can use a
