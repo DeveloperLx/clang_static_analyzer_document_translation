@@ -644,106 +644,103 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
     <tt>
         scan-build
     </tt>
-    simply sets the environment variable
+    简单地设置环境变量
     <tt>
         CC
     </tt>
-    to the full path to
+    为到
     <tt>
         ccc-analyzer
     </tt>
-    . It also sets a few other environment variables to communicate to
+    的全路径。它也设置几个环境变量来告知
     <tt>
         ccc-analyzer
     </tt>
-    where to dump HTML report files.
+    在何处生成（dump）HTML报告文件。
 </p>
 <p>
-    Some Makefiles (or equivalent project files) hardcode the compiler; for
-    such projects simply overriding
+	一些makefile（或等价的项目文件）硬编码了编译器；这样的项目简单地覆盖了
     <tt>
         CC
     </tt>
-    won't cause
+    这个环境变量，造成
     <tt>
         ccc-analyzer
     </tt>
-    to be called. This will cause the compiled code
+    无法被调用。这就会造成编译的代码
     <b>
-        to not be analyzed.
+    	无法被分析。
     </b>
 </p>
-If you find that your code isn't being analyzed, check to see if
+如果你发现你的代码无法被分析，检查一下是否是
 <tt>
     CC
 </tt>
-is hardcoded. If this is the case, you can hardcode it instead to the
-<b>
-    full path
-</b>
-to
+被硬编码了。如果是这个原因，你可以硬编码到
 <tt>
     ccc-analyzer
 </tt>
-.
+的
+<b>
+    全路径
+</b>
+硬编码地替换它。
 </p>
 <p>
-    When applicable, you can also run
+	在合适的情况下（applicable），你也可以通过
+	<tt>
+        scan-build
+    </tt>
+    为一个项目运行
     <tt>
         ./configure
     </tt>
-    for a project through
+    。这样configure就基于传入给
     <tt>
         scan-build
     </tt>
-    so that configure sets up the location of
+    的环境，设置了
     <tt>
         CC
     </tt>
-    based on the environment passed in from
-    <tt>
-        scan-build
-    </tt>
-    :
+    的位置：
     <pre>$ scan-build <b>./configure</b></pre>
     <p>
         <tt>
             scan-build
         </tt>
-        has special knowledge about
+        有特别的关于
         <tt>
             configure
         </tt>
-        , so it in most cases will not actually analyze the configure tests run
-        by
+        的“知识”，因此在大多数情况下，都不会实际地分析通过
         <tt>
             configure
         </tt>
-        .
+        执行的配置测试。
     </p>
     <p>
-        Under the hood,
+    	在这个hood下，
         <tt>
             ccc-analyzer
         </tt>
-        directly invokes
+        直接调用
         <tt>
             gcc
         </tt>
-        to compile the actual code in addition to running the analyzer (which
-        occurs by it calling
+        实际的代码，除了执行分析器之外（这是由它调用
         <tt>
             clang
         </tt>
-        ).
+        造成的）。
         <tt>
             ccc-analyzer
         </tt>
-        tries to correctly forward all the arguments over to
+        尝试转发全部的参数到
         <tt>
             gcc
         </tt>
-        , but this may not work perfectly (please report bugs of this kind).
+        ，但这是有可能无法完美地工作的（对于这种情况请报告bug）。
     <h2 id="iphone">
         Analyzing iPhone Projects
     </h2>
