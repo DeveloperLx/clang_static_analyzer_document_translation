@@ -332,10 +332,10 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
         <thead>
             <tr>
                 <td>
-                    Option
+                    选项
                 </td>
                 <td>
-                    Description
+                    描述
                 </td>
             </tr>
         </thead>
@@ -347,13 +347,11 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
                     </b>
                 </td>
                 <td>
-                    Target directory for HTML report files. Subdirectories will be created
-                    as needed to represent separate "runs" of the analyzer. If this option
-                    is not specified, a directory is created in
+                	HTML报告文件的目标目录。当需要表示分析的单独的“执行”时，会创建子目录。如果没有指定这个选项，目录将创建在
                     <tt>
                         /tmp
                     </tt>
-                    to store the reports.
+                    来保存报告。
                 </td>
             </tr>
             <tr>
@@ -363,15 +361,15 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
                     </b>
                     <br>
                     <i>
-                        (or&nbsp;no&nbsp;arguments)
+                        (或没有参数时)
                     </i>
                 </td>
                 <td>
-                    Display all
+                	展示全部的
                     <tt>
                         scan-build
                     </tt>
-                    options.
+                    选项。
                 </td>
             </tr>
             <tr>
@@ -385,21 +383,20 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
                     </b>
                 </td>
                 <td>
-                    Add a "keep on going" option to the specified build command.
+                	添加一个“保持继续”（keep on going）选项到指定的build目录。
                     <p>
-                        This option currently supports
+                    	这个选项当前支持
                         <tt>
                             make
                         </tt>
-                        and
+                        和
                         <tt>
                             xcodebuild
                         </tt>
-                        .
+                        。
                     </p>
                     <p>
-                        This is a convenience option; one can specify this behavior directly using
-                        build options.
+                    	它是一个便利选项；可以直接使用build选项来指定这个行为。
                     </p>
                 </td>
             </tr>
@@ -410,11 +407,11 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
                     </b>
                 </td>
                 <td>
-                    Verbose output from scan-build and the analyzer.
+                	从scan-build何分析器详细地输出。
                     <b>
-                        A second and third "-v" increases verbosity
+                    	第二和第三个“-v”会增加详细程度
                     </b>
-                    , and is useful for filing bug reports against the analyzer.
+                    ，这对于给分析器归档bug报告是非常有用的。
                 </td>
             </tr>
             <tr>
@@ -424,7 +421,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
                     </b>
                 </td>
                 <td>
-                    View analysis results in a web browser when the build command completes.
+                	当build命令完成后，在web浏览器中查看分析结果。
                 </td>
             </tr>
             <tr>
@@ -434,7 +431,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
                     </b>
                     <br>
                     <i>
-                        or
+                        或
                     </i>
                     <br>
                     <b>
@@ -445,9 +442,7 @@ $ <span class="code_highlight">scan-build</span> xcodebuild
                     <tt>
                         scan-build
                     </tt>
-                    uses the 'clang' executable relative to itself for static analysis. One
-                    can override this behavior with this option by using the 'clang' packaged
-                    with Xcode (on OS X) or from the PATH.
+                    为静态分析使用相对于它自己可执行的'clang' 。可以通过这个选项来覆盖这个行为，通过使用这个由Xcode打包，或从PATH而来的'clang'。
                     <p>
                     </p>
                 </td>
