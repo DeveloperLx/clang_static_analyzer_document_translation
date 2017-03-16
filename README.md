@@ -12,7 +12,7 @@
                         Clang静态分析器
                     </h1>
                     <p>	
-                    	Clang静态分析器是一个源码分析工具，可以找出在C, C++, 和Objective-C中的bug。
+                    	Clang静态分析器是一个源码分析工具，可以找出C, C++, 和Objective-C中的bug。
                     </p>
                     <p>
                     	当前它既可以作为
@@ -23,7 +23,7 @@
                         <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/Running%20the%20analyzer%20within%20Xcode.md">
                         	嵌入到Xcode中
                         </a>
-                        。单的工程是由命令行调用的，它会基于一个代码库的build，串行地运行。
+                        。单独的工程是由命令行调用的，它会基于一个代码库的build，串行地运行。
                     </p>
                     <p>
                     	这个分析器是100%开源的，且它是
@@ -120,7 +120,7 @@
         “静态分析”这个术语是一个组合名词（conflated），但在这里，我们用它来表示一个为自动找出bug，对源码进行分析的算法和技术的集合。这个主意类似于编译的警告（对于找到代码中的错误会非常有用），但又比这更进一步，找到通过传统的，例如测试，的运行时dubug方式才能找到的bug。
     </p>
     <p>
-        静态分析找bug的工具，已经从基本的语法分析，到通过推理代码的语义找到深层的bug进化了几十年。Clang静态分析器的目标，是为C，C++，和Objective-C语言的程序，提供一个商业品质的静态分析框架，他是免费可以获取的，可扩展，并有着高质量的实现。
+        静态分析找bug的工具，已经从基本的语法分析，到通过推理代码的语义找到深层的bug进化了几十年。Clang静态分析器的目标，是为C，C++，和Objective-C语言的程序，提供一个商业品质的静态分析框架，他是完全免费的，可扩展，并有着高质量的实现。
     </p>
     <h3 id="Clang">
         Clang和LLVM的部分
