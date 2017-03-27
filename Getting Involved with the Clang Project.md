@@ -27,7 +27,7 @@
         <a href="http://llvm.org">
             LLVM Project
         </a>
-        的子项目，但拥有自己的邮件列表，因为这个群体中含有不同利益的人。两个clang list是
+        的子项目，但拥有自己的mailing列表，因为这个群体中含有不同利益的人。两个clang list是
     </p>
     <ul>
         <li>
@@ -55,40 +55,37 @@
         。
     </p>
     <p>
-        The best way to talk with other developers on the project is through the
+        在这个项目上，和其它开发者进行讨论的最好的方式，就是通过
         <a href="http://lists.llvm.org/mailman/listinfo/cfe-dev">
-            cfe-dev mailing list
+            cfe-dev mailing列表
         </a>
-        . The clang mailing list is a very friendly place and we welcome newcomers.
-        In addition to the cfe-dev list, a significant amount of design discussion
-        takes place on the
+        。clang mailing是一个非常友好的地方，我们欢迎新手。除了cfe-dev列表，相当数量的设计讨论进行在
         <a href="http://lists.llvm.org/mailman/listinfo/cfe-commits">
-            cfe-commits mailing list
+            cfe-commits mailing列表
         </a>
-        . All of these lists have archives, so you can browse through previous
-        discussions or follow the list development on the web if you prefer.
+        中。所有的这些列表都已归档，这样你就可以浏览之前的讨论。或如果偏好的话，跟随这个列表在网上开发。
     </p>
     <p>
+        你也可以跟随
         You can also follow the
         <a href="http://planet.clang.org/">
             Planet Clang
         </a>
-        community news feed which offers a window into the world, work and lives
-        of Clang developers, contributors and the standards they implement.
+        社区的新闻流，它提供了一个世界的窗口，Clang的开发者，贡献者以及它们实现的标准都工作并生活在此。
     </p>
     <p>
-        If you're looking for something to work on, check out our
+        如果你正在寻找该做些什么，请check
         <a href="http://clang.llvm.org/OpenProjects.html">
             Open Projects
         </a>
-        page or look through the
+        这页，或浏览
         <a href="http://llvm.org/bugs/">
             Bugzilla bug database
         </a>
-        .
+        。
     </p>
     <h2 id="criteria">
-        Contributing Extensions to Clang
+        向clang贡献扩展
     </h2>
     <p>
         Clang has always been designed as a platform for experimentation, allowing
