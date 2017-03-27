@@ -2,63 +2,57 @@
 
 <div id="content">
     <h1>
-        Getting Involved with the Clang Project
+        参与clang项目
     </h1>
     <p>
-        Once you have
+        一旦你
         <a href="http://clang.llvm.org/get_started.html">
-            checked out and built
+            查看和build了
         </a>
-        clang and played around with it, you might be wondering what you can do
-        to make it better and contribute to its development. Alternatively, maybe
-        you just want to follow the development of the project to see it progress.
+        clang，并玩转了它，你可能会好奇怎样让它变得更好，以及对它的开发进行贡献。亦或是，你只是想跟随项目的开发来查看它的进度。
     </p>
     <h2>
-        Contribute
+        贡献
     </h2>
-    See the
+    查看
     <a href="http://clang.llvm.org/hacking.html">
-        hacking
+        hacking文档
     </a>
-    document for information on how to author patches.
+    中的怎么创建patch的相关信息。
     <h2>
-        Follow what's going on
+        跟随正在进行中的事
     </h2>
     <p>
-        Clang is a subproject of the
+        Clang是
         <a href="http://llvm.org">
             LLVM Project
         </a>
-        , but has its own mailing lists because the communities have people with
-        different interests. The two clang lists are:
+        的子项目，但拥有自己的邮件列表，因为这个群体中含有不同利益的人。两个clang list是
     </p>
     <ul>
         <li>
             <a href="http://lists.llvm.org/mailman/listinfo/cfe-commits">
                 cfe-commits
             </a>
-            - This list is for patch submission/discussion.
+            - 这个列表中是提交和讨论的patch。
         </li>
         <li>
             <a href="http://lists.llvm.org/mailman/listinfo/cfe-dev">
                 cfe-dev
             </a>
-            - This list is for everything else Clang related (questions and answers,
-            design discussions, etc).
+            - 这个列表中是全部其它的clang相关的事（问题和答案，设计讨论，等等）。
         </li>
     </ul>
     <p>
-        If you are interested in clang only, these two lists should be all you
-        need. If you are interested in the LLVM optimizer and code generator, please
-        consider signing up for
+        如果你只对clang感兴趣，这两个列表就是你全部需要的。如果你感兴趣于LLVM优化器和code生成器，那就也需要考虑登记
         <a href="http://lists.llvm.org/mailman/listinfo/llvm-dev">
             llvm-dev
         </a>
-        and
+        和
         <a href="http://lists.llvm.org/mailman/listinfo/llvm-commits">
             llvm-commits
         </a>
-        as well.
+        。
     </p>
     <p>
         The best way to talk with other developers on the project is through the
