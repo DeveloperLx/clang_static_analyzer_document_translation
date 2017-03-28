@@ -88,15 +88,7 @@
         向clang贡献扩展
     </h2>
     <p>
-        Clang has always been designed as a platform for experimentation, allowing
-        programmers to easily extend the compiler to support great new language
-        features and tools. At some point, the authors of these extensions may
-        propose that the extensions become a part of Clang itself, to benefit the
-        whole Clang community. But not every idea--not even every great idea--should
-        become part of Clang. Extensions (particularly language extensions) pose
-        a long-term maintenance burden on Clang, and therefore the benefits of
-        the extension must outweight those costs. Hence, these are the seven criteria
-        used to evaluate the merits of a proposed extension:
+    	Clang一直都被设计为一个实验性的平台，让编程者可以轻松地扩展编译器来支持新的语言特性和工具。在某种程度上，这些扩展的作者可以建议将这些扩展编程Clang本身的一部分，来使得整个的Clang社区受益。但并不是每一个idea -- 甚至是每一个很棒的idea -- 都应该成为Clang的一部分。扩展（尤其是语言的扩展）使Clang产生了长期持有的负担，因此这个扩展的利处必须胜过这些代价。因此，下面有7个标准用来评估提议的扩展：
     </p>
     <ol>
         <li>
