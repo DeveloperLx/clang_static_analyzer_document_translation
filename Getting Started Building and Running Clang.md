@@ -214,20 +214,14 @@
             </ul>
         </li>
         <li>
-            If you intend to use Clang's C++ support, you may need to tell it how
-            to find your C++ standard library headers. In general, Clang will detect
-            the best version of libstdc++ headers available and use them - it will
-            look both for system installations of libstdc++ as well as installations
-            adjacent to Clang itself. If your configuration fits neither of these scenarios,
-            you can use the
+            如果你打算使用Clang的C++的支持，你就需要告知它如何来找到你的C++标准库头文件。通常来说，Clang将会探测可用的最好的libstdc++头文件的版本，并使用它们 - 它将查看libstdc++的系统安装的版本，和相邻Clang本身的安装版本。如果你的配置不适用这些情景中的任何一种，你可以使用
             <tt>
                 -DGCC_INSTALL_PREFIX
             </tt>
-            cmake option to tell Clang where the gcc containing the desired libstdc++
-            is installed.
+            这个cmake选项来告诉Clang，包含有期望的libstdc++的gcc的安装的位置。
         </li>
         <li>
-            Try it out (assuming you add llvm/build/bin to your path):
+            事实看（假设你已添加了llvm/build/bin到你的路径中）：
             <ul>
                 <li>
                     <tt>
@@ -238,13 +232,13 @@
                     <tt>
                         clang file.c -fsyntax-only
                     </tt>
-                    (check for correctness)
+                    （检查正确性）
                 </li>
                 <li>
                     <tt>
                         clang file.c -S -emit-llvm -o -
                     </tt>
-                    (print out unoptimized llvm code)
+                    （输出未优化过的llvm代码）
                 </li>
                 <li>
                     <tt>
@@ -255,12 +249,12 @@
                     <tt>
                         clang file.c -S -O3 -o -
                     </tt>
-                    (output native machine code)
+                    （输出本地的机器码）
                 </li>
             </ul>
         </li>
         <li>
-            Run the testsuite:
+            运行测试套件：
             <ul>
                 <li>
                     <tt>
