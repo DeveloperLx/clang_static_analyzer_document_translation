@@ -74,11 +74,11 @@
         社区的新闻流，它提供了一个世界的窗口，Clang的开发者，贡献者以及它们实现的标准都工作并生活在此。
     </p>
     <p>
-        如果你正在寻找该做些什么，请check
+        如果你正在寻找该做些什么，请访问
         <a href="http://clang.llvm.org/OpenProjects.html">
             Open Projects
         </a>
-        这页，或浏览
+        ，或浏览
         <a href="http://llvm.org/bugs/">
             Bugzilla bug database
         </a>
@@ -92,13 +92,13 @@
     </p>
     <ol>
         <li>
-            一个重大的用户群体的证明：这基于大量的因素，包括在事实上存在用户群体；在它可用的情况下，用户会采用如此特性的可以感知的可能性；还有来自于它的任何“涓流”效应（"trickle-down" effects），例如，某个库采用了这个特性，并为用户提供了益处。
+            重大的用户群体的证明：这基于大量的因素，包括在事实上存在用户群体；在它可用的情况下，用户会采用如此特性的可以感知的可能性；还有来自于它的任何“涓流”效应（"trickle-down" effects），例如，某个库采用了这个特性，并为用户提供了益处。
         </li>
         <li>
-            一个特定的需要存在在Clang树的需求：一些扩展，如果被表达为一个独立的工具，可能会更好一些；即使它们最后被托管，成为了LLVM保护伞（umbrella）项目的一部分，也应当仍然作为独立的工具。
+            特定的需要存在在Clang树的需求：一些扩展，如果被表达为一个独立的工具，可能会更好一些；即使它们最后被托管，成为了LLVM保护伞（umbrella）项目的一部分，也应当仍然作为独立的工具。
         </li>
         <li>
-            一个完整的规范：这个规范，必须足够去理解特性的设计，以及解释特定例子的含义。这个规范必须足够详细，使得另一个编译器供应者可以很容易地实现其特性。
+            完整的规范：这个规范，必须足够去理解特性的设计，以及解释特定例子的含义。这个规范必须足够详细，使得另一个编译器供应者可以很容易地实现其特性。
         </li>
         <li>
             Representation within the appropriate governing organization: For extensions
@@ -109,12 +109,14 @@
             some extensions fall outside of the realm of the standards bodies.
         </li>
         <li>
+            长期支持的计划：
             A long-term support plan: Contributing a non-trivial extension to Clang
             implies a commitment to supporting that extension, improving the implementation
             and specification as Clang evolves. The capacity of the contributor to
             make that commitment is as important as the commitment itself.
         </li>
         <li>
+            高质量的实现：
             A high-quality implementation: The implementation must fit well into Clang's
             architecture, follow LLVM's coding conventions, and meet Clang's quality
             standards, including high-quality diagnostics and rich AST representations.
@@ -122,6 +124,7 @@
             learn how those extensions work through the behavior of the compiler.
         </li>
         <li>
+            适当的测试组件：
             A proper test suite: Extensive testing is crucial to ensure that the language
             extension is not broken by ongoing maintenance in Clang. The test suite
             should be complete enough that another compiler vendor could conceivably
