@@ -101,34 +101,16 @@
             完整的规范：这个规范，必须足够去理解特性的设计，以及解释特定例子的含义。这个规范必须足够详细，使得另一个编译器供应者可以很容易地实现其特性。
         </li>
         <li>
-            Representation within the appropriate governing organization: For extensions
-            to a language governed by a standards committee (C, C++, OpenCL), the extension
-            itself must have an active proposal and proponent within that committee
-            and have a reasonable chance of acceptance. Clang should drive the standard,
-            not diverge from it. This criterion does not apply to all extensions, since
-            some extensions fall outside of the realm of the standards bodies.
+            在适当的有管理的组织中进行表达：对于由一个标准社区(C, C++, OpenCL)管理的语言的扩展，这个扩展本身必须有一个积极的提议，一个在这个社区的支持者，以及一个正当的接受的机会。Clang应该驱动这个标准，而不是偏离它。这个标准并不适用于所有的扩展，因为一些扩展超出了标准体系的范围。
         </li>
         <li>
-            长期支持的计划：
-            A long-term support plan: Contributing a non-trivial extension to Clang
-            implies a commitment to supporting that extension, improving the implementation
-            and specification as Clang evolves. The capacity of the contributor to
-            make that commitment is as important as the commitment itself.
+            长期的支持计划：贡献一个非凡的扩展到Clang，就意味着一个承诺来支持这个扩展，随着Clang的进化提升它的实现和规格。贡献者实现这个承诺的能力，和这个承诺本身是同等重要的。
         </li>
         <li>
-            高质量的实现：
-            A high-quality implementation: The implementation must fit well into Clang's
-            architecture, follow LLVM's coding conventions, and meet Clang's quality
-            standards, including high-quality diagnostics and rich AST representations.
-            This is particularly important for language extensions, because users will
-            learn how those extensions work through the behavior of the compiler.
+            高质量的实现：这个实现必须很好地适合于Clan的架构，符合LLVM的编码管理，达到Clang的质量标准，包含高质量的诊断和丰富的AST（抽象语法树）的表达。这对于语言的扩展是特别重要的，因为用户将通过编译器的表现，来了解那些扩展如何工作。
         </li>
         <li>
-            适当的测试组件：
-            A proper test suite: Extensive testing is crucial to ensure that the language
-            extension is not broken by ongoing maintenance in Clang. The test suite
-            should be complete enough that another compiler vendor could conceivably
-            validate their implementation of the feature against it.
+            适当的测试套件：大量的测试，对于确保语言扩展不被Clang的持续维护破坏，是至关重要的。这个测试套件应当足够得完整，使得另一个编译器供应商，可以非常相信地验证他们特性的实现。
         </li>
     </ol>
 </div>
