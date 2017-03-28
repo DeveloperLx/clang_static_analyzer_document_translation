@@ -5,7 +5,7 @@
         开始：build和执行Clang
     </h1>
     <p>
-        本篇将给你最短的路径来检查（check out）Clang并演示一些选项。这需要打起精神来（get you up），并以最小的混乱（muss）和烦躁（fuss）来执行。如果你喜欢你看到的，请考虑
+        本篇将给你最快捷的路径来检查Clang并演示一些选项。这需要打起精神来（get you up），并以最小的混乱（muss）和烦躁（fuss）来执行。如果你喜欢你看到的，请考虑
         <a href="http://clang.llvm.org/get_involved.html">
             getting involved
         </a>
