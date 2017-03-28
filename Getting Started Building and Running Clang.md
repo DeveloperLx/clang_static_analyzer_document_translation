@@ -5,7 +5,7 @@
         开始：build和执行Clang
     </h1>
     <p>
-        本篇将给你最快捷的路径来检查Clang并演示一些选项。这需要打起精神来（get you up），并以最小的混乱（muss）和烦躁（fuss）来执行。如果你喜欢你看到的，请考虑
+        本篇将给你最快捷的路径来查看Clang，并演示一些选项。这需要打起精神来（get you up），并以最小的混乱（muss）和烦躁（fuss）来执行。如果你喜欢你看到的，请考虑
         <a href="http://clang.llvm.org/get_involved.html">
             getting involved
         </a>
@@ -50,28 +50,27 @@
         “
     </p>
     <p>
-        If you would like to check out and build Clang, the current procedure
-        is as follows:
+        如果你想要查看并build Clang，当前的步骤如下：
     </p>
     <ol>
         <li>
-            Get the required tools.
+            获取需求的工作。
             <ul>
                 <li>
-                    See
+                    查看
                     <a href="http://llvm.org/docs/GettingStarted.html#requirements">
                         Getting Started with the LLVM System - Requirements
                     </a>
-                    .
+                    。
                 </li>
                 <li>
-                    Note also that Python is needed for running the test suite. Get it at:
+                    注意运行测试套件也需要Python。从这里获取：
                     <a href="http://www.python.org/download">
                         http://www.python.org/download
                     </a>
                 </li>
                 <li>
-                    Standard build process uses CMake. Get it at:
+                    标准的build过程使用CMake。从这里获取：
                     <a href="http://www.cmake.org/download">
                         http://www.cmake.org/download
                     </a>
@@ -79,10 +78,10 @@
             </ul>
         </li>
         <li>
-            Check out LLVM:
+            查看LLVM：
             <ul>
                 <li>
-                    Change directory to where you want the llvm directory placed.
+                    改变目录到你想要放置llvm目录的位置。
                 </li>
                 <li>
                     <tt>
@@ -92,7 +91,7 @@
             </ul>
         </li>
         <li>
-            Check out Clang:
+            查看Clang：
             <ul>
                 <li>
                     <tt>
@@ -112,7 +111,7 @@
             </ul>
         </li>
         <li>
-            Check out extra Clang tools: (optional)
+            查看额外的Clang工具：（可选）
             <ul>
                 <li>
                     <tt>
@@ -132,7 +131,7 @@
             </ul>
         </li>
         <li>
-            Check out Compiler-RT (optional):
+            查看Compiler-RT (可选)：
             <ul>
                 <li>
                     <tt>
@@ -152,8 +151,7 @@
             </ul>
         </li>
         <li>
-            Check out libcxx: (only required to build and run Compiler-RT tests on
-            OS X, optional otherwise)
+            查看libcxx：（仅在OS X平台上build并运行Compiler-RT测试时是必须的，对于其它情况下都是可选的）
             <ul>
                 <li>
                     <tt>
@@ -173,7 +171,7 @@
             </ul>
         </li>
         <li>
-            Build LLVM and Clang:
+            Build LLVM和Clang:
             <ul>
                 <li>
                     <tt>
@@ -197,23 +195,21 @@
                     </tt>
                 </li>
                 <li>
-                    This builds both LLVM and Clang for debug mode.
+                    这将在debug模式下build LLVM和Clang。
                 </li>
                 <li>
-                    Note: For subsequent Clang development, you can just run
+                    注意：对于随后的Clang开发，你只需运行
                     <tt>
                         make clang
                     </tt>
-                    .
+                    即可。
                 </li>
                 <li>
-                    CMake allows you to generate project files for several IDEs: Xcode, Eclipse
-                    CDT4, CodeBlocks, Qt-Creator (use the CodeBlocks generator), KDevelop3.
-                    For more details see
+                    你可以用CMake来生成几种IDE的项目文件：Xcode，Eclipse CDT4，CodeBlocks，Qt-Creator（使用CodeBlocks生成器），KDevelop3。对于更多的信息请查看
                     <a href="http://llvm.org/docs/CMake.html">
                         Building LLVM with CMake
                     </a>
-                    page.
+                    。
                 </li>
             </ul>
         </li>
