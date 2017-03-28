@@ -92,11 +92,7 @@
     </p>
     <ol>
         <li>
-            Evidence of a significant user community: This is based on a number of
-            factors, including an actual, existing user community, the perceived likelihood
-            that users would adopt such a feature if it were available, and any "trickle-down"
-            effects that come from, e.g., a library adopting the feature and providing
-            benefits to its users.
+            一个重大的用户群体的证明：这基于大量的因素，包括在事实上存在用户群体；在它可用的情况下，用户会采用如此特性的可以感知的可能性；还有来自于它的任何“涓流”效应（"trickle-down" effects），例如，某个库采用了这个特性，并为用户提供了益处。
         </li>
         <li>
             A specific need to reside within the Clang tree: There are some extensions
