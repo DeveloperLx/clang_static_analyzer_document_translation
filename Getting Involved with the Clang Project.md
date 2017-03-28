@@ -67,7 +67,6 @@
     </p>
     <p>
         你也可以跟随
-        You can also follow the
         <a href="http://planet.clang.org/">
             Planet Clang
         </a>
