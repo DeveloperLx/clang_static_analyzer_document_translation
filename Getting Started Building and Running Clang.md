@@ -35,19 +35,19 @@
         在类Unix系统上
     </h3>
     <p>
-        Note: as an experimental setup, you can use a
+        注意：作为一个实验性的配置，你可以对全部的项目使用
         <b>
             single checkout
         </b>
-        with all the projects, and an
+        ，和
         <b>
             easy CMake invocation
         </b>
-        , see the LLVM Doc "
-        <a href="http://llvm.org/docs/GettingStarted.html#for-developers-to-work-with-a-git-monorepo">
+        ，查看LLVM的文档 “
+        <a href="https://github.com/DeveloperLx/clang_static_analyzer_document_translation/blob/master/Getting%20Started%20with%20the%20LLVM%20System.md">
             For developers to work with a git monorepo
         </a>
-        "
+        “
     </p>
     <p>
         If you would like to check out and build Clang, the current procedure
