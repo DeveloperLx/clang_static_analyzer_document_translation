@@ -95,16 +95,10 @@
             一个重大的用户群体的证明：这基于大量的因素，包括在事实上存在用户群体；在它可用的情况下，用户会采用如此特性的可以感知的可能性；还有来自于它的任何“涓流”效应（"trickle-down" effects），例如，某个库采用了这个特性，并为用户提供了益处。
         </li>
         <li>
-            A specific need to reside within the Clang tree: There are some extensions
-            that would be better expressed as a separate tool, and should remain as
-            separate tools even if they end up being hosted as part of the LLVM umbrella
-            project.
+            一个特定的需要存在在Clang树的需求：一些扩展，如果被表达为一个独立的工具，可能会更好一些；即使它们最后被托管，成为了LLVM保护伞（umbrella）项目的一部分，也应当仍然作为独立的工具。
         </li>
         <li>
-            A complete specification: The specification must be sufficient to understand
-            the design of the feature as well as interpret the meaning of specific
-            examples. The specification should be detailed enough that another compiler
-            vendor could conceivably implement the feature.
+            一个完整的规范：这个规范，必须足够去理解特性的设计，以及解释特定例子的含义。这个规范必须足够详细，使得另一个编译器供应者可以很容易地实现其特性。
         </li>
         <li>
             Representation within the appropriate governing organization: For extensions
