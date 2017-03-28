@@ -265,9 +265,7 @@
         </li>
     </ol>
     <p>
-        If you encounter problems while building Clang, make sure that your LLVM
-        checkout is at the same revision as your Clang checkout. LLVM's interfaces
-        change over time, and mismatched revisions are not expected to work together.
+        如果你在build Clang时遇到了问题，请确保你的LLVM检出和你的Clang检出是相同的。LLVM的界面会随着时间而改变，不匹配的版本不会被期望工作在一起。
     </p>
     <h3>
         Simultaneously Building Clang and LLVM:
