@@ -334,15 +334,14 @@
                     <b>
                         Python
                     </b>
-                    . This is needed only if you will be running the tests (which is essential,
-                    if you will be developing for clang). Get it from:
+                    。这仅在你运行测试时需要（如果你要为clang进行开发，测试时非常必要的）。从这里获取：
                     <a href="http://www.python.org/download/">
                         http://www.python.org/download/
                     </a>
                 </li>
                 <li>
                     <b>
-                        GnuWin32 tools
+                        GnuWin32工具
                     </b>
                     These are also necessary for running the tests. (Note that the grep from
                     MSYS or Cygwin doesn't work with the tests because of embedded double-quotes
