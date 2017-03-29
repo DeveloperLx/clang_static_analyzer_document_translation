@@ -301,17 +301,17 @@
         使用Visual Studio
     </h3>
     <p>
-        The following details setting up for and building Clang on Windows using Visual Studio:
+        下列的细节，可以在Windows上使用Visual Studio设置和build Clang：
     </p>
     <ol>
         <li>
-            Get the required tools:
+            获取必须的工具：
             <ul>
                 <li>
                     <b>
                         Subversion
                     </b>
-                    . Source code control program. Get it from:
+                    。源码控制程序。从这里获取：
                     <a href="http://subversion.apache.org/packages.html">
                         http://subversion.apache.org/packages.html
                     </a>
@@ -320,15 +320,14 @@
                     <b>
                         CMake
                     </b>
-                    . This is used for generating Visual Studio solution and project files.
-                    Get it from:
+                    。用来生成Visual Studio的解决方案和项目文件。从这里获取：
                     <a href="http://www.cmake.org/cmake/resources/software.html">
                         http://www.cmake.org/cmake/resources/software.html
                     </a>
                 </li>
                 <li>
                     <b>
-                        Visual Studio 2013 or later
+                        Visual Studio 2013或更高的版本
                     </b>
                 </li>
                 <li>
