@@ -268,45 +268,40 @@
         如果你在build Clang时遇到了问题，请确保你的LLVM检出和你的Clang检出是相同的。LLVM的界面会随着时间而改变，不匹配的版本不会被期望工作在一起。
     </p>
     <h3>
-        Simultaneously Building Clang and LLVM:
+    	同时build Clang和LLVM：
     </h3>
     <p>
-        Once you have checked out Clang into the llvm source tree it will build
-        along with the rest of
+    	一旦你将Clang check到llvm的源码树中，它将与剩余的
         <tt>
             llvm
         </tt>
-        . To build all of LLVM and Clang together all at once simply run
+        一起构建。为了同时一起build所有的LLVM和Clang，只需在LLVM的根目录中运行
         <tt>
             make
         </tt>
-        from the root LLVM directory.
+        。
     </p>
     <p>
         <em>
-            Note:
+            注意：
         </em>
-        Observe that Clang is technically part of a separate Subversion repository.
-        As mentioned above, the latest Clang sources are tied to the latest sources
-        in the LLVM tree. You can update your toplevel LLVM project and all (possibly
-        unrelated) projects inside it with
+        注意到，Clang在技术上是Subversion仓库中的单独的一部分。正如上面所提到的，最新的Clang源码依赖于最新的LLVM树中的源码。你可以使用
         <tt>
             <b>
                 make update
             </b>
         </tt>
-        . This will run
+        来更新你顶层的LLVM项目，以及在其中的全部（可能都没有关系）的项目。这将在所有相关于subversion的子目录中运行
         <tt>
             svn update
         </tt>
-        on all subdirectories related to subversion.
+        。
     </p>
     <h3 id="buildWindows">
-        Using Visual Studio
+        使用Visual Studio
     </h3>
     <p>
-        The following details setting up for and building Clang on Windows using
-        Visual Studio:
+        The following details setting up for and building Clang on Windows using Visual Studio:
     </p>
     <ol>
         <li>
