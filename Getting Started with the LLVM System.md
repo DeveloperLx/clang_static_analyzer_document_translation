@@ -773,7 +773,7 @@
                         </code>
                     </p>
                     <p>
-                        Some common generators are:
+                        一些常见的生成器有：
                     </p>
                     <ul class="simple">
                         <li>
@@ -785,7 +785,7 @@
                                     Makefiles
                                 </span>
                             </code>
-                            — for generating make-compatible parallel makefiles.
+                            - 用来生成兼容的并行makefile。
                         </li>
                         <li>
                             <code class="docutils literal">
@@ -793,11 +793,11 @@
                                     Ninja
                                 </span>
                             </code>
-                            — for generating
+                            - 用来生成
                             <a class="reference external" href="https://ninja-build.org">
                                 Ninja
                             </a>
-                            build files. Most llvm developers use Ninja.
+                            build文件。大多数的llvm的开发者都使用Ninja。
                         </li>
                         <li>
                             <code class="docutils literal">
@@ -808,7 +808,7 @@
                                     Studio
                                 </span>
                             </code>
-                            — for generating Visual Studio projects and solutions.
+                            - 用来生成Visual Studio项目和解决方案。
                         </li>
                         <li>
                             <code class="docutils literal">
@@ -816,11 +816,11 @@
                                     Xcode
                                 </span>
                             </code>
-                            — for generating Xcode projects.
+                            - 用来生成Xcode项目。
                         </li>
                     </ul>
                     <p>
-                        Some Common options:
+                        一些常用的选项：
                     </p>
                     <ul class="simple">
                         <li>
@@ -829,18 +829,17 @@
                                     -DCMAKE_INSTALL_PREFIX=directory
                                 </span>
                             </code>
-                            — Specify for
+                            - 指定你想要将LLVM工具和库安装到的
                             <em>
-                                directory
+                                目录
                             </em>
-                            the full pathname of where you want the LLVM tools and libraries to be
-                            installed (default
+                            的全路径（默认值为
                             <code class="docutils literal">
                                 <span class="pre">
                                     /usr/local
                                 </span>
                             </code>
-                            ).
+                            ）。
                         </li>
                         <li>
                             <code class="docutils literal">
@@ -848,45 +847,43 @@
                                     -DCMAKE_BUILD_TYPE=type
                                 </span>
                             </code>
-                            — Valid options for
+                            - 
                             <em>
                                 type
                             </em>
-                            are Debug, Release, RelWithDebInfo, and MinSizeRel. Default is Debug.
+                            的有效选项有Debug，Release，RelWithDebInfo，和MinSizeRel。默认为Default。
                         </li>
                         <li>
                             <code class="docutils literal">
                                 <span class="pre">
                                     -DLLVM_ENABLE_ASSERTIONS=On
                                 </span>
-                            </code>
-                            — Compile with assertion checks enabled (default is Yes for Debug builds,
-                            No for all other build types).
+                            </code>Yes
+                            - 编译时打开断言（Debug build时默认为Yes，但并非对全部的build类似都是这样）。
                         </li>
                     </ul>
                 </li>
                 <li>
                     <p class="first">
-                        Run your build tool of choice!
+                        运行你的build工具的选择！
                     </p>
                     <ul class="simple">
                         <li>
-                            The default target (i.e.
+                            默认的target（也就是说
                             <code class="docutils literal">
                                 <span class="pre">
                                     make
                                 </span>
                             </code>
-                            ) will build all of LLVM
+                            ）将会build全部的LLVM
                         </li>
                         <li>
-                            The
                             <code class="docutils literal">
                                 <span class="pre">
                                     check-all
                                 </span>
                             </code>
-                            target (i.e.
+                            target（也就是说
                             <code class="docutils literal">
                                 <span class="pre">
                                     make
@@ -895,30 +892,29 @@
                                     check-all
                                 </span>
                             </code>
-                            ) will run the regression tests to ensure everything is in working order.
+                            ）将运行回归测试来确保每一件事有序地工作。
                         </li>
                         <li>
-                            CMake will generate build targets for each tool and library, and most
-                            LLVM sub-projects generate their own
+                            CMake将为每个工具和库生成build target，大多数LLVM的子项目会生成它们自己的
                             <code class="docutils literal">
                                 <span class="pre">
                                     check-&lt;project&gt;
                                 </span>
                             </code>
-                            target.
+                            target。
                         </li>
                         <li>
-                            Running a serial build will be
+                            运行串行的build将会
                             <em>
-                                slow
+                                较慢
                             </em>
-                            . Make sure you run a parallel build; for
+                            。确保你运行平行的build；对于
                             <code class="docutils literal">
                                 <span class="pre">
                                     make
                                 </span>
                             </code>
-                            , use
+                            ，使用
                             <code class="docutils literal">
                                 <span class="pre">
                                     make
@@ -927,13 +923,13 @@
                                     -j
                                 </span>
                             </code>
-                            .
+                            。
                         </li>
                     </ul>
                 </li>
                 <li>
                     <p class="first">
-                        For more information see
+                        有关更多的信息，请参考
                         <a class="reference external" href="CMake.html">
                             CMake
                         </a>
@@ -941,42 +937,39 @@
                 </li>
                 <li>
                     <p class="first">
-                        If you get an “internal compiler error (ICE)” or test failures, see
+                        如果你遇到了“内部编译错误（ICE）”或测试失败，参考
                         <a class="reference internal" href="#below">
-                            below
+                            下文
                         </a>
-                        .
+                        。
                     </p>
                 </li>
             </ul>
         </li>
     </ol>
     <p>
-        Consult the
+        关于配置和编译LLVM的详细信息，请查阅
         <a class="reference internal" href="#getting-started-with-llvm">
-            Getting Started with LLVM
+            LLVM入门
         </a>
-        section for detailed information on configuring and compiling LLVM. Go
-        to
+        这部分。前往
         <a class="reference internal" href="#directory-layout">
             Directory Layout
         </a>
-        to learn about the layout of the source code tree.
+        来了解源码树的布局。
     </p>
 </div>
 <div class="section" id="requirements">
     <h2>
         <a class="toc-backref" href="#id6">
-            Requirements
+            要求
         </a>
         <a class="headerlink" href="#requirements" title="Permalink to this headline">
             ¶
         </a>
     </h2>
     <p>
-        Before you begin to use the LLVM system, review the requirements given
-        below. This may save you some trouble by knowing ahead of time what hardware
-        and software you will need.
+        在你开始使用LLVM系统之前，回顾下面列出的要求。这可以通过提前了解你需要什么硬件和软件，来把你从一些麻烦中解救出来。
     </p>
     <div class="section" id="hardware">
         <h3>
