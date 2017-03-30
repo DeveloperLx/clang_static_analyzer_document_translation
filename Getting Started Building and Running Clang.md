@@ -429,27 +429,25 @@
             </ul>
         </li>
         <li>
-            Build Clang:
+            构建Clang：
             <ul>
                 <li>
-                    Open LLVM.sln in Visual Studio.
+                    在Visual Studio中打开LLVM.sln。
                 </li>
                 <li>
-                    Build the "clang" project for just the compiler driver and front end,
-                    or the "ALL_BUILD" project to build everything, including tools.
+                    仅为编译器驱动和前端build"clang"项目，或者build包括工具在内的”ALL_BUILD“项目。
                 </li>
             </ul>
         </li>
         <li>
-            Try it out (assuming you added llvm/debug/bin to your path). (See the
-            running examples from above.)
+            尝试一下（假设你已添加了llvm/debug/bin到你的路径中）。（见上面的运行示例）
         </li>
         <li>
-            See
-            <a href="hacking.html#testingWindows">
-                Hacking on clang - Testing using Visual Studio on Windows
+            关于在Windows上执行回归测试的相关信息，请参考
+            <a href="http://www.llvm.org/hacking.html#testingWindows">
+                clang上的黑客攻击 - 使用Visual Studio在Windows上进行测试
             </a>
-            for information on running regression tests on Windows.
+            。
         </li>
     </ol>
     <p>
