@@ -469,7 +469,7 @@
         </li>
         <li>
             <p class="first">
-                获取Compiler-RT（build sanitizers所必须的）
+                获取Compiler-RT（build“粉碎机”（sanitizers）所必须的）
                 <strong>
                     [可选]
                 </strong>
@@ -676,24 +676,20 @@
             </p>
             <p>
                 <em>
-                    Warning:
+                    警告：
                 </em>
-                Make sure you’ve checked out
+                确保你已在尝试配置cmake前，获取了
                 <em>
-                    all of
+                    全部的
                 </em>
-                the source code before trying to configure with cmake. cmake does not
-                pickup newly added source directories in incremental builds.
+                源码。cmake不能在增量编译中，获取新添加的源码的目录。
             </p>
             <p>
-                The build uses
+                build使用
                 <a class="reference external" href="CMake.html">
                     CMake
                 </a>
-                . LLVM requires CMake 3.4.3 to build. It is generally recommended to use
-                a recent CMake, especially if you’re generating Ninja build files. This
-                is because the CMake project is constantly improving the quality of the
-                generators, and the Ninja generator gets a lot of attention.
+                。LLVM要求CMake 3.4.3来build。通常建议最新的CMake，尤其在你生成Ninja build文件的时候。这是因为CMake项目一直在持续地提高生成器的质量，Ninja生成器受到了较多的关注。
             </p>
             <ul>
                 <li>
