@@ -343,18 +343,16 @@
                     <b>
                         GnuWin32工具
                     </b>
-                    These are also necessary for running the tests. (Note that the grep from
-                    MSYS or Cygwin doesn't work with the tests because of embedded double-quotes
-                    in the search strings. The GNU grep does work in this case.) Get them from
+                    这些对于运行测试也是必须的。（注意，由于在搜索字符串中嵌入了双引号，MSYS（Minimal GNU（POSIX）system on Windows 是一个小型的GNU环境）或Cygwin（小型的UNIX模拟环境）的grep无法起作用。但GNU的grep在这个case下是可以正常工作的。）从这里获取：
                     <a href="http://getgnuwin32.sourceforge.net/">
                         http://getgnuwin32.sourceforge.net/
                     </a>
-                    .
+                    。
                 </li>
             </ul>
         </li>
         <li>
-            Check out LLVM:
+            获取LLVM:
             <ul>
                 <li>
                     <tt>
@@ -364,7 +362,7 @@
             </ul>
         </li>
         <li>
-            Check out Clang:
+            获取Clang:
             <ul>
                 <li>
                     <tt>
@@ -379,15 +377,13 @@
             </ul>
             <p>
                 <em>
-                    Note
+                    注意
                 </em>
-                : Some Clang tests are sensitive to the line endings. Ensure that checking
-                out the files does not convert LF line endings to CR+LF. If you use git-svn,
-                make sure your
+                ：一些Clang的测试对于行的结尾是敏感的。确保被check的文件没有将LF的行结尾转化为CR+LF的。如果你使用的是git-svn，确保你的
                 <tt>
                     core.autocrlf
                 </tt>
-                setting is false.
+                设置为false。
             </p>
         </li>
         <li>
