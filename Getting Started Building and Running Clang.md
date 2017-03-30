@@ -387,19 +387,19 @@
             </p>
         </li>
         <li>
-            Run CMake to generate the Visual Studio solution and project files:
+            运行CMake来生成Visual Studio的解决方案和项目文件：
             <ul>
                 <li>
                     <tt>
                         cd ..\..
                     </tt>
-                    (back to where you started)
+                    （回到你开始的位置）
                 </li>
                 <li>
                     <tt>
                         mkdir build
                     </tt>
-                    (for building without polluting the source dir)
+                    （为了在没有污染源码目录的前提下进行build）
                 </li>
                 <li>
                     <tt>
@@ -407,24 +407,24 @@
                     </tt>
                 </li>
                 <li>
-                    If you are using Visual Studio 2013:
+                    如果你正在使用Visual Studio 2013：
                     <tt>
                         cmake -G "Visual Studio 12" ..\llvm
                     </tt>
                 </li>
                 <li>
-                    See the
+                    关于CMake的其它配置选项，查看
                     <a href="http://www.llvm.org/docs/CMake.html">
                         LLVM CMake guide
                     </a>
-                    for more information on other configuration options for CMake.
+                    。
                 </li>
                 <li>
-                    The above, if successful, will have created an LLVM.sln file in the
+                    如果成功完成了上述步骤，就会创建出一个LLVM.sln文件在
                     <tt>
                         build
                     </tt>
-                    directory.
+                    目录中。
                 </li>
             </ul>
         </li>
