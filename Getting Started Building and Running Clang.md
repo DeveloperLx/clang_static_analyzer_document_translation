@@ -478,11 +478,7 @@ $ <b>./a.out</b>
 hello world
 </pre>
     <p>
-        The 'clang' driver is designed to work as closely to GCC as possible to
-        maximize portability. The only major difference between the two is that
-        Clang defaults to gnu99 mode while GCC defaults to gnu89 mode. If you see
-        weird link-time errors relating to inline functions, try passing -std=gnu89
-        to clang.
+        'clang'驱动旨在竭尽可能地于GCC密切地合作。两者之间的唯一主要的区别，是Clang默认为gnu99模式，而GCC默认为gnu89模式。如果你看到了怪异的，和内联函数相关的错误，尝试传递参数-std=gnu89给clang。
     </p>
     <h2>
         使用Clang的例子
@@ -520,16 +516,15 @@ V foo(V a, V b) { return a+b*a; }
 1 diagnostic generated.
 </pre>
     <h3>
-        Pretty printing from the AST:
+        来自AST（抽象语法树）的漂亮的输出：
     </h3>
     <p>
+        注意，
         Note, the
         <tt>
             -cc1
         </tt>
-        argument indicates the compiler front-end, and not the driver, should
-        be run. The compiler front-end has several additional Clang specific features
-        which are not exposed through the GCC compatible driver interface.
+        参数指示了是编译器的前端，而不是驱动应该被运行。这个编译器的前端有几个额外的，Clang特定的特性，它们没有被GCC兼容的驱动接口暴露出来。
     </p>
     <pre class="code">$ <b>clang -cc1 ~/t.c -ast-print</b>
 typedef float V __attribute__(( vector_size(16) ));
