@@ -1,7 +1,7 @@
 #### [原文地址](http://llvm.org/docs/GettingStarted.html) 翻译：[DeveloperLx](http://weibo.com/DeveloperLx)
 
 <h1>
-    Getting Started with the LLVM System
+    从LLVM系统开始吧！
     <a class="headerlink" href="#getting-started-with-the-llvm-system" title="Permalink to this headline">
         ¶
     </a>
@@ -10,40 +10,40 @@
     <ul class="simple">
         <li>
             <a class="reference internal" href="#overview" id="id4">
-                Overview
+                概述
             </a>
         </li>
         <li>
             <a class="reference internal" href="#getting-started-quickly-a-summary"
             id="id5">
-                Getting Started Quickly (A Summary)
+                快速入门（摘要）
             </a>
         </li>
         <li>
             <a class="reference internal" href="#requirements" id="id6">
-                Requirements
+                需求条件
             </a>
             <ul>
                 <li>
                     <a class="reference internal" href="#hardware" id="id7">
-                        Hardware
+                        硬件
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#software" id="id8">
-                        Software
+                        软件
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#host-c-toolchain-both-compiler-and-standard-library"
                     id="id9">
-                        Host C++ Toolchain, both Compiler and Standard Library
+                        Host C++工具链，编译器和标准库
                     </a>
                     <ul>
                         <li>
                             <a class="reference internal" href="#getting-a-modern-host-c-toolchain"
                             id="id10">
-                                Getting a Modern Host C++ Toolchain
+                                获取现代的Host C++ Toolchain
                             </a>
                         </li>
                     </ul>
@@ -52,80 +52,80 @@
         </li>
         <li>
             <a class="reference internal" href="#getting-started-with-llvm" id="id11">
-                Getting Started with LLVM
+                从LLVM开始
             </a>
             <ul>
                 <li>
                     <a class="reference internal" href="#terminology-and-notation" id="id12">
-                        Terminology and Notation
+                        术语和记号
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#unpacking-the-llvm-archives" id="id13">
-                        Unpacking the LLVM Archives
+                        打开LLVM的归档
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#checkout-llvm-from-subversion" id="id14">
-                        Checkout LLVM from Subversion
+                        从Subversion获取LLVM
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#git-mirror" id="id15">
-                        Git Mirror
+                        Git镜像
                     </a>
                     <ul>
                         <li>
                             <a class="reference internal" href="#sending-patches-with-git" id="id16">
-                                Sending patches with Git
+                                使用Git发送patch
                             </a>
                         </li>
                         <li>
                             <a class="reference internal" href="#for-developers-to-work-with-git-svn"
                             id="id17">
-                                For developers to work with git-svn
+                                开发者使用git-svn
                             </a>
                         </li>
                         <li>
                             <a class="reference internal" href="#for-developers-to-work-with-a-git-monorepo"
                             id="id18">
-                                For developers to work with a git monorepo
+                                开发者使用git monorepo
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a class="reference internal" href="#local-llvm-configuration" id="id19">
-                        Local LLVM Configuration
+                        本地的LLVM配置
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#compiling-the-llvm-suite-source-code"
                     id="id20">
-                        Compiling the LLVM Suite Source Code
+                        编译LLVM套件的源码
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#cross-compiling-llvm" id="id21">
-                        Cross-Compiling LLVM
+                        交叉编译LLVM
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#the-location-of-llvm-object-files"
                     id="id22">
-                        The Location of LLVM Object Files
+                        LLVM对象文件的位置
                     </a>
                 </li>
                 <li>
                     <a class="reference internal" href="#optional-configuration-items" id="id23">
-                        Optional Configuration Items
+                        可选的配置项目
                     </a>
                 </li>
             </ul>
         </li>
         <li>
             <a class="reference internal" href="#directory-layout" id="id24">
-                Directory Layout
+                目录布局
             </a>
             <ul>
                 <li>
@@ -205,24 +205,24 @@
         <li>
             <a class="reference internal" href="#an-example-using-the-llvm-tool-chain"
             id="id33">
-                An Example Using the LLVM Tool Chain
+                一个使用LLVM工具链的例子
             </a>
             <ul>
                 <li>
                     <a class="reference internal" href="#example-with-clang" id="id34">
-                        Example with clang
+                        clang的例子
                     </a>
                 </li>
             </ul>
         </li>
         <li>
             <a class="reference internal" href="#common-problems" id="id35">
-                Common Problems
+                常见问题
             </a>
         </li>
         <li>
             <a class="reference internal" href="#links" id="id36">
-                Links
+                链接
             </a>
         </li>
     </ul>
@@ -230,85 +230,76 @@
 <div class="section" id="overview">
     <h2>
         <a class="toc-backref" href="#id4">
-            Overview
+            概述
         </a>
         <a class="headerlink" href="#overview" title="Permalink to this headline">
             ¶
         </a>
     </h2>
     <p>
-        Welcome to LLVM! In order to get started, you first need to know some
-        basic information.
+        欢迎来到LLVM！为了入行，你首先需要了解一些基本的信息。
     </p>
     <p>
-        First, LLVM comes in three pieces. The first piece is the LLVM suite.
-        This contains all of the tools, libraries, and header files needed to use
-        LLVM. It contains an assembler, disassembler, bitcode analyzer and bitcode
-        optimizer. It also contains basic regression tests that can be used to
-        test the LLVM tools and the Clang front end.
+        首先，LLVM有三个部分。第一块是LLVM套件。它包含使用LLVM所需的全部的工具，库，以及头文件。它包含一个汇编程序，反汇编程序，字节码分析器和字节码优化器。它还包含基本的回归测试，可以用来测试LLVM工具和Clang前端。
     </p>
     <p>
-        The second piece is the
+        第二块则是
         <a class="reference external" href="http://clang.llvm.org/">
             Clang
         </a>
-        front end. This component compiles C, C++, Objective C, and Objective
-        C++ code into LLVM bitcode. Once compiled into LLVM bitcode, a program
-        can be manipulated with the LLVM tools from the LLVM suite.
+        前端。这个组件编译C，C++，Objective C，和Objective C++代码为LLVM的字节码，它是一个可以被来自LLVM套件的LLVM工具操作的程序。
     </p>
     <p>
-        There is a third, optional piece called Test Suite. It is a suite of programs
-        with a testing harness that can be used to further test LLVM’s functionality
-        and performance.
+        第三部分，是一个叫做测试套件的可选的块。它是一个程序的套件，带有一个可以用来进一步测试LLVM的功能和性能的测试工具。
     </p>
 </div>
 <div class="section" id="getting-started-quickly-a-summary">
     <h2>
         <a class="toc-backref" href="#id5">
-            Getting Started Quickly (A Summary)
+            快速入门（摘要）
         </a>
         <a class="headerlink" href="#getting-started-quickly-a-summary" title="Permalink to this headline">
             ¶
         </a>
     </h2>
     <p>
-        The LLVM Getting Started documentation may be out of date. So, the
+        LLVM的入门文档可能已过期。因此
         <a class="reference external" href="http://clang.llvm.org/get_started.html">
-            Clang Getting Started
+            Clang入门
         </a>
-        page might also be a good place to start.
+        可能也是一个不错的入门的地方。
     </p>
     <p>
-        Here’s the short story for getting up and running quickly with LLVM:
+        这里是使用LLVM快速启动和运行的简短历程：
     </p>
     <ol class="arabic">
         <li>
             <p class="first">
-                Read the documentation.
+                阅读文档。
             </p>
         </li>
         <li>
             <p class="first">
-                Read the documentation.
+                阅读文档。
             </p>
         </li>
         <li>
             <p class="first">
-                Remember that you were warned twice about reading the documentation.
+                记住，你被警告了两次要阅读文档。
             </p>
             <ul class="simple">
                 <li>
-                    In particular, the
+                    特别地，
                     <em>
-                        relative paths specified are important
+                        指定相对路径是非常重要的
                     </em>
-                    .
+                    。
                 </li>
             </ul>
         </li>
         <li>
             <p class="first">
-                Checkout LLVM:
+                获取LLVM：
             </p>
             <ul class="simple">
                 <li>
@@ -317,7 +308,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -341,7 +332,7 @@
         </li>
         <li>
             <p class="first">
-                Checkout Clang:
+                获取Clang：
             </p>
             <ul class="simple">
                 <li>
@@ -350,7 +341,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -384,11 +375,11 @@
         </li>
         <li>
             <p class="first">
-                Checkout LLD linker
+                获取LLD linker
                 <strong>
-                    [Optional]
+                    [可选]
                 </strong>
-                :
+                ：
             </p>
             <ul class="simple">
                 <li>
@@ -397,7 +388,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -431,11 +422,11 @@
         </li>
         <li>
             <p class="first">
-                Checkout Polly Loop Optimizer
+                获取Polly Loop优化器
                 <strong>
-                    [Optional]
+                    [可选]
                 </strong>
-                :
+                ：
             </p>
             <ul class="simple">
                 <li>
@@ -444,7 +435,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -478,9 +469,9 @@
         </li>
         <li>
             <p class="first">
-                Checkout Compiler-RT (required to build the sanitizers)
+                获取Compiler-RT（build sanitizers所必须的）
                 <strong>
-                    [Optional]
+                    [可选]
                 </strong>
                 :
             </p>
@@ -491,7 +482,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -525,11 +516,11 @@
         </li>
         <li>
             <p class="first">
-                Checkout Libomp (required for OpenMP support)
+                获取Libomp（OpenMP支持所必须的）
                 <strong>
-                    [Optional]
+                    [可选]
                 </strong>
-                :
+                ：
             </p>
             <ul class="simple">
                 <li>
@@ -538,7 +529,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -572,11 +563,11 @@
         </li>
         <li>
             <p class="first">
-                Checkout libcxx and libcxxabi
+                获取libcxx和libcxxabi
                 <strong>
-                    [Optional]
+                    [可选]
                 </strong>
-                :
+                ：
             </p>
             <ul class="simple">
                 <li>
@@ -585,7 +576,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -635,9 +626,9 @@
         </li>
         <li>
             <p class="first">
-                Get the Test Suite Source Code
+                获取测试套件的源码
                 <strong>
-                    [Optional]
+                    [可选]
                 </strong>
             </p>
             <ul class="simple">
@@ -647,7 +638,7 @@
                             cd
                         </span>
                         <span class="pre">
-                            where-you-want-llvm-to-live
+                            你要将llvm保存到的地方
                         </span>
                     </code>
                 </li>
@@ -681,7 +672,7 @@
         </li>
         <li>
             <p class="first">
-                Configure and build LLVM and Clang:
+                配置并build LLVM和Clang：
             </p>
             <p>
                 <em>
