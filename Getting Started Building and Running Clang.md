@@ -451,45 +451,32 @@
         </li>
     </ol>
     <p>
-        Note that once you have checked out both llvm and clang, to synchronize
-        to the latest code base, use the
+        注意一旦你check out了llvm和clang，为了同步最新的代码库，在llvm和llvm\tools\clang目录中都要使用
         <tt>
             svn update
         </tt>
-        command in both the llvm and llvm\tools\clang directories, as they are
-        separate repositories.
+        命令，因为它们是独立的仓库。
     </p>
     <h2 id="driver">
-        Clang Compiler Driver (Drop-in Substitute for GCC)
+        Clang编译器的驱动（GCC插件的替代）
     </h2>
     <p>
-        The
         <tt>
             clang
         </tt>
-        tool is the compiler driver and front-end, which is designed to be a drop-in
-        replacement for the
+        工具是编译器的驱动和前端，被设计为一个
         <tt>
             gcc
         </tt>
-        command. Here are some examples of how to use the high-level driver:
+        命令的插件替代。以下是一些怎么使用高级驱动的例子：
     </p>
-    <pre class="code">
-        $
-        <b>
-            cat t.c
-        </b>
-        #include &lt;stdio.h&gt; int main(int argc, char **argv) { printf("hello
-        world\n"); } $
-        <b>
-            clang t.c
-        </b>
-        $
-        <b>
-            ./a.out
-        </b>
-        hello world
-    </pre>
+    <pre class="code">$ <b>cat t.c</b>
+#include &lt;stdio.h&gt;
+int main(int argc, char **argv) { printf("hello world\n"); }
+$ <b>clang t.c</b>
+$ <b>./a.out</b>
+hello world
+</pre>
     <p>
         The 'clang' driver is designed to work as closely to GCC as possible to
         maximize portability. The only major difference between the two is that
@@ -498,61 +485,40 @@
         to clang.
     </p>
     <h2>
-        Examples of using Clang
+        使用Clang的例子
     </h2>
     <!-- Thanks to http://shiflett.org/blog/2006/oct/formatting-and-highlighting-php-code-listings
     Site suggested using pre in CSS, but doesn't work in IE, so went for the
     <pre>
     tag. -->
-    <pre class="code">
-        $
-        <b>
-            cat ~/t.c
-        </b>
-        typedef float V __attribute__((vector_size(16))); V foo(V a, V b) { return
-        a+b*a; }
-    </pre>
+    <pre class="code">$ <b>cat ~/t.c</b>
+typedef float V __attribute__((vector_size(16)));
+V foo(V a, V b) { return a+b*a; }
+</pre>
     <h3>
-        Preprocessing:
+        预处理：
     </h3>
-    <pre class="code">
-        $
-        <b>
-            clang ~/t.c -E
-        </b>
-        # 1 "/Users/sabre/t.c" 1 typedef float V __attribute__((vector_size(16)));
-        V foo(V a, V b) { return a+b*a; }
-    </pre>
+    <pre class="code">$ <b>clang ~/t.c -E</b>
+# 1 "/Users/sabre/t.c" 1
+
+typedef float V __attribute__((vector_size(16)));
+
+V foo(V a, V b) { return a+b*a; }
+</pre>
     <h3>
-        Type checking:
+        输入checking：
     </h3>
-    <pre class="code">
-        $
-        <b>
-            clang -fsyntax-only ~/t.c
-        </b>
-    </pre>
+    <pre class="code">$ <b>clang -fsyntax-only ~/t.c</b>
+</pre>
     <h3>
-        GCC options:
+        GCC选项：
     </h3>
-    <pre class="code">
-        $
-        <b>
-            clang -fsyntax-only ~/t.c -pedantic
-        </b>
-        /Users/sabre/t.c:2:17:
-        <span style="color:magenta">
-            warning:
-        </span>
-        extension used
-        <span style="color:darkgreen">
-            typedef float V __attribute__((vector_size(16)));
-        </span>
-        <span style="color:blue">
-            ^
-        </span>
-        1 diagnostic generated.
-    </pre>
+    <pre class="code">$ <b>clang -fsyntax-only ~/t.c -pedantic</b>
+/Users/sabre/t.c:2:17: <span style="color:magenta">warning:</span> extension used
+<span style="color:darkgreen">typedef float V __attribute__((vector_size(16)));</span>
+<span style="color:blue">                ^</span>
+1 diagnostic generated.
+</pre>
     <h3>
         Pretty printing from the AST:
     </h3>
@@ -565,31 +531,29 @@
         be run. The compiler front-end has several additional Clang specific features
         which are not exposed through the GCC compatible driver interface.
     </p>
-    <pre class="code">
-        $
-        <b>
-            clang -cc1 ~/t.c -ast-print
-        </b>
-        typedef float V __attribute__(( vector_size(16) )); V foo(V a, V b) {
-        return a + b * a; }
-    </pre>
+    <pre class="code">$ <b>clang -cc1 ~/t.c -ast-print</b>
+typedef float V __attribute__(( vector_size(16) ));
+V foo(V a, V b) {
+   return a + b * a;
+}
+</pre>
     <h3>
-        Code generation with LLVM:
+        使用LLVM生成的代码：
     </h3>
-    <pre class="code">
-        $
-        <b>
-            clang ~/t.c -S -emit-llvm -o -
-        </b>
-        define &lt;4 x float&gt; @foo(&lt;4 x float&gt; %a, &lt;4 x float&gt;
-        %b) { entry: %mul = mul &lt;4 x float&gt; %b, %a %add = add &lt;4 x float&gt;
-        %mul, %a ret &lt;4 x float&gt; %add } $
-        <b>
-            clang -fomit-frame-pointer -O3 -S -o - t.c
-        </b>
-        <i>
-            # On x86_64
-        </i>
-        ... _foo: Leh_func_begin1: mulps %xmm0, %xmm1 addps %xmm1, %xmm0 ret Leh_func_end1:
-    </pre>
+    <pre class="code">$ <b>clang ~/t.c -S -emit-llvm -o -</b>
+define &lt;4 x float&gt; @foo(&lt;4 x float&gt; %a, &lt;4 x float&gt; %b) {
+entry:
+         %mul = mul &lt;4 x float&gt; %b, %a
+         %add = add &lt;4 x float&gt; %mul, %a
+         ret &lt;4 x float&gt; %add
+}
+$ <b>clang -fomit-frame-pointer -O3 -S -o - t.c</b> <i># On x86_64</i>
+...
+_foo:
+Leh_func_begin1:
+	mulps	%xmm0, %xmm1
+	addps	%xmm1, %xmm0
+	ret
+Leh_func_end1:
+</pre>
 </div>
