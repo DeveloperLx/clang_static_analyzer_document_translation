@@ -983,7 +983,7 @@
         <p>
             已知LLVM可以在以下的主机平台运行：
         </p>
-        <table border="1" class="docutils">
+        <table class="docutils">
             <colgroup>
                 <col width="35%">
                     <col width="40%">
