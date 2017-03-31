@@ -1207,7 +1207,7 @@
         <p>
             编译LLVM需要你安装几个软件包。下表列出了这些需求的包。Package列是LLVM以来的软件包的常用名。Version列提供了包的“已知的工作”的版本。Notes列描述了LLVM怎么使用包和提供其它信息。
         </p>
-        <table border="1" class="docutils">
+        <table class="docutils">
             <colgroup>
                 <col width="52%">
                     <col width="11%">
