@@ -984,11 +984,7 @@
             已知LLVM可以在以下的主机平台运行：
         </p>
         <table border="1" class="docutils">
-            <colgroup>
-                <col width="35%">
-                    <col width="40%">
-                        <col width="25%">
-            </colgroup>
+
             <thead valign="bottom">
                 <tr class="row-odd">
                     <th class="head">
