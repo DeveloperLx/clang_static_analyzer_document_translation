@@ -974,14 +974,14 @@
     <div class="section" id="hardware">
         <h3>
             <a class="toc-backref" href="#id7">
-                Hardware
+                硬件
             </a>
             <a class="headerlink" href="#hardware" title="Permalink to this headline">
                 ¶
             </a>
         </h3>
         <p>
-            LLVM is known to work on the following host platforms:
+            已知LLVM可以在以下的主机平台运行：
         </p>
         <table border="1" class="docutils">
             <colgroup>
@@ -992,13 +992,13 @@
             <thead valign="bottom">
                 <tr class="row-odd">
                     <th class="head">
-                        OS
+                        操作系统
                     </th>
                     <th class="head">
-                        Arch
+                        架构
                     </th>
                     <th class="head">
-                        Compilers
+                        编译器
                     </th>
                 </tr>
             </thead>
@@ -1157,66 +1157,55 @@
         </table>
         <div class="admonition note">
             <p class="first admonition-title">
-                Note
+                注意
             </p>
             <ol class="last arabic simple">
                 <li>
-                    Code generation supported for Pentium processors and up
+                    支持奔腾处理器及以上的代码生成器
                 </li>
                 <li>
-                    Code generation supported for 32-bit ABI only
+                    仅支持32位的ABI（应用系统二进制接口）的代码生成器
                 </li>
                 <li>
-                    To use LLVM modules on Win32-based system, you may configure LLVM with
+                    为了在基于Win32的系统上使用LLVM模块，你可以用
                     <code class="docutils literal">
                         <span class="pre">
                             -DBUILD_SHARED_LIBS=On
                         </span>
                     </code>
-                    .
+                    来配置LLVM。
                 </li>
                 <li>
+                    MCJIT在v7版本之前工作不正常，因为旧的JIT引擎不再支持。
                     MCJIT not working well pre-v7, old JIT engine not supported any more.
                 </li>
             </ol>
         </div>
         <p>
-            Note that Debug builds require a lot of time and disk space. An LLVM-only
-            build will need about 1-3 GB of space. A full build of LLVM and Clang will
-            need around 15-20 GB of disk space. The exact space requirements will vary
-            by system. (It is so large because of all the debugging information and
-            the fact that the libraries are statically linked into multiple tools).
+            注意，Debug的build需要大量的时间和磁盘空间。仅build LLVM的情况就需要大概1-3 GB的空间。而完整的LLVM和Clang的build则需要15-20 GB的磁盘空间。准确的空间需求则会随着系统的变化而变化。（之所以需求如此之大，是由于全部的debug信息，以及大量的库都是被静态连接到多个工具中的事实）。
         </p>
         <p>
-            If you you are space-constrained, you can build only selected tools or
-            only selected targets. The Release build requires considerably less space.
+            如果您的空间有限，你可以只build选择的工具或选择的target。Release的build只需要相当少的空间。
         </p>
         <p>
-            The LLVM suite
+            LLVM套件
             <em>
                 may
             </em>
-            compile on other platforms, but it is not guaranteed to do so. If compilation
-            is successful, the LLVM utilities should be able to assemble, disassemble,
-            analyze, and optimize LLVM bitcode. Code generation should work as well,
-            although the generated native code may not work on your platform.
+            可能在其它平台上编译，但不能确保这么做。如果编译成功，LLVM工具就应当可以完成汇编、反汇编、分析和优化LLVM字节码。代码生成器也应该可以工作，尽管生成的本地代码可能无法在你的平台上运行。
         </p>
     </div>
     <div class="section" id="software">
         <h3>
             <a class="toc-backref" href="#id8">
-                Software
+                软件
             </a>
             <a class="headerlink" href="#software" title="Permalink to this headline">
                 ¶
             </a>
         </h3>
         <p>
-            Compiling LLVM requires that you have several software packages installed.
-            The table below lists those required packages. The Package column is the
-            usual name for the software package that LLVM depends on. The Version column
-            provides “known to work” versions of the package. The Notes column describes
-            how LLVM uses the package and provides other details.
+            编译LLVM需要你安装几个软件包。下表列出了这些需求的包。Package列是LLVM以来的软件包的常用名。Version列提供了包的“已知的工作”的版本。Notes列描述了LLVM怎么使用包和提供其它信息。
         </p>
         <table border="1" class="docutils">
             <colgroup>
@@ -1303,7 +1292,7 @@
         </table>
         <div class="admonition note">
             <p class="first admonition-title">
-                Note
+                注意
             </p>
             <ol class="last arabic simple">
                 <li>
