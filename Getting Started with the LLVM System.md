@@ -1473,7 +1473,7 @@
         </span>
         <h3>
             <a class="toc-backref" href="#id9">
-                主机C++工具链，包含编译器和标注库
+                主C++工具链，包含编译器和标注库
             </a>
             <a class="headerlink" href="#host-c-toolchain-both-compiler-and-standard-library"
             title="Permalink to this headline">
@@ -1481,15 +1481,10 @@
             </a>
         </h3>
         <p>
-            LLVM is very demanding of the host C++ compiler, and as such tends to
-            expose bugs in the compiler. We are also planning to follow improvements
-            and developments in the C++ language and library reasonably closely. As
-            such, we require a modern host C++ toolchain, both compiler and standard
-            library, in order to build LLVM.
+            主机的C++编译器对LLVM的要求非常高，因此往往编译器会出现错误。我们也在计划在C++语言，及合理关联的库中进一步地发展完善。因此，为了build LLVM，我们要求一个现代的主C++工具链，包含编译器和标注库。
         </p>
         <p>
-            For the most popular host toolchains we check for specific minimum versions
-            in our build systems:
+            关于最流行的主工具链，我们在构建系统确定的最低版本：
         </p>
         <ul class="simple">
             <li>
