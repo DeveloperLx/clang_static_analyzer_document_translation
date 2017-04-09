@@ -1541,9 +1541,7 @@
                 GNU Binutils 2.19.1 Gold
             </strong>
             ：这个Gold版本包含
-            : This version of Gold contained
             <a class="reference external" href="http://sourceware.org/bugzilla/show_bug.cgi?id=9836">
-                a bug
                 一个bug
             </a>
             ，当构建和位置无关的LLVM时，它造成了一个偶现的失败。这个现象是一个有关循环依赖的错误。我们建议更新到一个新的Gold版本。
@@ -1551,7 +1549,6 @@
         <div class="section" id="getting-a-modern-host-c-toolchain">
             <h4>
                 <a class="toc-backref" href="#id10">
-                    Getting a Modern Host C++ Toolchain
                     获得一个现代的主C++工具链
                 </a>
                 <a class="headerlink" href="#getting-a-modern-host-c-toolchain" title="Permalink to this headline">
