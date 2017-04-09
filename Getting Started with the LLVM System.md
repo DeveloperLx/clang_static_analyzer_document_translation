@@ -1552,6 +1552,7 @@
             <h4>
                 <a class="toc-backref" href="#id10">
                     Getting a Modern Host C++ Toolchain
+                    获得一个现代的主C++工具链
                 </a>
                 <a class="headerlink" href="#getting-a-modern-host-c-toolchain" title="Permalink to this headline">
                     ¶
