@@ -1498,64 +1498,55 @@
             </li>
         </ul>
         <p>
-            Anything older than these toolchains
+            比这些工具链更老的
             <em>
-                may
+                也可以
             </em>
-            work, but will require forcing the build system with a special option
-            and is not really a supported host platform. Also note that older versions
-            of these compilers have often crashed or miscompiled LLVM.
+            工作，但会要求构建系统带有一个特定的选项，并不是实际地支持的主平台。同时，注意这些较老版本的编译器经常会崩溃，或错误地编译LLVM。
         </p>
         <p>
-            For less widely used host toolchains such as ICC or xlC, be aware that
-            a very recent version may be required to support all of the C++ features
-            used in LLVM.
+            对于并不广泛使用的主工具链，例如ICC或xlC，注意可能需要一个最新版本，来支持用于LLVM的全部的C++特性。
         </p>
         <p>
-            We track certain versions of software that are
+            我们会追踪
             <em>
                 known
             </em>
-            to fail when used as part of the host toolchain. These even include linkers
-            at times.
+            当被作为工具链的一部分使用时，会失败的某一版本的软件。这些有时甚至会包含连接器。
         </p>
         <p>
             <strong>
                 GNU ld 2.16.X
             </strong>
-            . Some 2.16.X versions of the ld linker will produce very long warning
-            messages complaining that some “
+            。一些某一版本的软件版本的ld连接器，会产生非常长的警告信息，抱怨一些
             <code class="docutils literal">
                 <span class="pre">
                     .gnu.linkonce.t.*
                 </span>
             </code>
-            ” symbol was defined in a discarded section. You can safely ignore these
-            messages as they are erroneous and the linkage is correct. These messages
-            disappear using ld 2.17.
+            ”符号被定义到了一个已废弃的部分。你可以安全地忽略掉这些信息，因为它们是错误的，连接是正确的。这些信息在ld 2.17版本时已消失。
         </p>
         <p>
             <strong>
                 GNU binutils 2.17
             </strong>
-            : Binutils 2.17 contains
+            ：Binutils 2.17包含
             <a class="reference external" href="http://sourceware.org/bugzilla/show_bug.cgi?id=3111">
-                a bug
+                一个bug
             </a>
-            which causes huge link times (minutes instead of seconds) when building
-            LLVM. We recommend upgrading to a newer version (2.17.50.0.4 or later).
+            ，它在构建LLVM造成了大量的连接时间（分钟级的）。我们建议将其升级到一个更新的版本（2.17.50.0.4或更高）。
         </p>
         <p>
             <strong>
                 GNU Binutils 2.19.1 Gold
             </strong>
+            ：这个Gold版本包含
             : This version of Gold contained
             <a class="reference external" href="http://sourceware.org/bugzilla/show_bug.cgi?id=9836">
                 a bug
+                一个bug
             </a>
-            which causes intermittent failures when building LLVM with position independent
-            code. The symptom is an error about cyclic dependencies. We recommend upgrading
-            to a newer version of Gold.
+            ，当构建和位置无关的LLVM时，它造成了一个偶现的失败。这个现象是一个有关循环依赖的错误。我们建议更新到一个新的Gold版本。
         </p>
         <div class="section" id="getting-a-modern-host-c-toolchain">
             <h4>
