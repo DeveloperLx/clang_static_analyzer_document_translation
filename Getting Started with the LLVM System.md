@@ -1324,145 +1324,145 @@
                 <strong>
                     ar
                 </strong>
-                — archive library builder
+                - 归档库构建器
             </li>
             <li>
                 <strong>
                     bzip2
                 </strong>
-                — bzip2 command for distribution generation
+                - bzip2命令用于发布版本
             </li>
             <li>
                 <strong>
                     bunzip2
                 </strong>
-                — bunzip2 command for distribution checking
+                - bunzip2命令用于发布校验
             </li>
             <li>
                 <strong>
                     chmod
                 </strong>
-                — change permissions on a file
+                - 改变一个文件的权限
             </li>
             <li>
                 <strong>
                     cat
                 </strong>
-                — output concatenation utility
+                - 输出的连结工具
             </li>
             <li>
                 <strong>
                     cp
                 </strong>
-                — copy files
+                - 拷贝文件
             </li>
             <li>
                 <strong>
                     date
                 </strong>
-                — print the current date/time
+                - 打印当前的日期/时间
             </li>
             <li>
                 <strong>
                     echo
                 </strong>
-                — print to standard output
+                - 打印到标注输出
             </li>
             <li>
                 <strong>
                     egrep
                 </strong>
-                — extended regular expression search utility
+                - 扩展的正则表达式搜索工具
             </li>
             <li>
                 <strong>
                     find
                 </strong>
-                — find files/dirs in a file system
+                - 在文件系统中查找文件/目录
             </li>
             <li>
                 <strong>
                     grep
                 </strong>
-                — regular expression search utility
+                - 正则表达式搜索工具
             </li>
             <li>
                 <strong>
                     gzip
                 </strong>
-                — gzip command for distribution generation
+                - gzip命令用来发布版本
             </li>
             <li>
                 <strong>
                     gunzip
                 </strong>
-                — gunzip command for distribution checking
+                - gunzip命令用来发布校验
             </li>
             <li>
                 <strong>
                     install
                 </strong>
-                — install directories/files
+                - 安装目录/文件
             </li>
             <li>
                 <strong>
                     mkdir
                 </strong>
-                — create a directory
+                - 创建一个目录
             </li>
             <li>
                 <strong>
                     mv
                 </strong>
-                — move (rename) files
+                - 移动（重命名）文件
             </li>
             <li>
                 <strong>
                     ranlib
                 </strong>
-                — symbol table builder for archive libraries
+                - 归档库的符号表生成器
             </li>
             <li>
                 <strong>
                     rm
                 </strong>
-                — remove (delete) files and directories
+                - 删除文件和目录
             </li>
             <li>
                 <strong>
                     sed
                 </strong>
-                — stream editor for transforming output
+                - 用于转换输出的流编辑器
             </li>
             <li>
                 <strong>
                     sh
                 </strong>
-                — Bourne shell for make build scripts
+                - 用来build脚本的Bourne shell
             </li>
             <li>
                 <strong>
                     tar
                 </strong>
-                — tape archive for distribution generation
+                - 用于发布版本的tape归档
             </li>
             <li>
                 <strong>
                     test
                 </strong>
-                — test things in file system
+                - 在文件系统中进行测试
             </li>
             <li>
                 <strong>
                     unzip
                 </strong>
-                — unzip command for distribution checking
+                - unzip命令用于发布校验
             </li>
             <li>
                 <strong>
                     zip
                 </strong>
-                — zip command for distribution generation
+                - zip命令用于发布版本
             </li>
         </ul>
     </div>
@@ -1473,7 +1473,7 @@
         </span>
         <h3>
             <a class="toc-backref" href="#id9">
-                Host C++ Toolchain, both Compiler and Standard Library
+                主机C++工具链，包含编译器和标注库
             </a>
             <a class="headerlink" href="#host-c-toolchain-both-compiler-and-standard-library"
             title="Permalink to this headline">
