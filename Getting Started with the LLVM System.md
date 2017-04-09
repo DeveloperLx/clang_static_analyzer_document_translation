@@ -237,13 +237,13 @@
         </a>
     </h2>
     <p>
-        欢迎来到LLVM！为了入行，你首先需要了解一些基本的信息。
+        欢迎来到LLVM！为了入门，你首先需要了解一些基本的信息。
     </p>
     <p>
-        首先，LLVM有三个部分。第一块是LLVM套件。它包含使用LLVM所需的全部的工具，库，以及头文件。它包含一个汇编程序，反汇编程序，字节码分析器和字节码优化器。它还包含基本的回归测试，可以用来测试LLVM工具和Clang前端。
+        首先，LLVM有三个部分。第一个部分是LLVM套件。它包含使用LLVM所需的全部的工具，库，以及头文件。它包含一个汇编程序，反汇编程序，字节码分析器和字节码优化器。它还包含基本的回归测试，可以用来测试LLVM工具和Clang前端。
     </p>
     <p>
-        第二块则是
+        第二个部分则是
         <a class="reference external" href="http://clang.llvm.org/">
             Clang
         </a>
@@ -267,7 +267,7 @@
         <a class="reference external" href="http://clang.llvm.org/get_started.html">
             Clang入门
         </a>
-        可能也是一个不错的入门的地方。
+        也是一个不错的入门的地方。
     </p>
     <p>
         这里是使用LLVM快速启动和运行的简短历程：
@@ -285,7 +285,7 @@
         </li>
         <li>
             <p class="first">
-                记住，你被警告了两次要阅读文档。
+                记住，你被提醒了两次要阅读文档。
             </p>
             <ul class="simple">
                 <li>
@@ -1296,31 +1296,28 @@
             </p>
             <ol class="last arabic simple">
                 <li>
-                    Only the C and C++ languages are needed so there’s no need to build the
-                    other languages for LLVM’s purposes. See
+                    只需要C和C++语言，因此无需为LLVM构建其它的语言。查看
                     <cite>
-                        below
+                        下面
                     </cite>
-                    for specific version info.
+                    特定版本的信息。
                 </li>
                 <li>
-                    Only needed if you want to run the automated test suite in the
+                    仅在你想要在
                     <code class="docutils literal">
                         <span class="pre">
                             llvm/test
                         </span>
                     </code>
-                    directory.
+                    目录下运行自动测试套件时才需要。
                 </li>
                 <li>
-                    Optional, adds compression / uncompression capabilities to selected LLVM
-                    tools.
+                    添加压缩/解压的能力到LLVM工具中是可选的。
                 </li>
             </ol>
         </div>
         <p>
-            Additionally, your compilation host is expected to have the usual plethora
-            of Unix utilities. Specifically:
+            另外，希望你的编译主机含有下列的Unix工具。尤其是：
         </p>
         <ul class="simple">
             <li>
