@@ -1556,266 +1556,61 @@
                 </a>
             </h4>
             <p>
-                This section mostly applies to Linux and older BSDs. On Mac OS X, you
-                should have a sufficiently modern Xcode, or you will likely need to upgrade
-                until you do. Windows does not have a “system compiler”, so you must install
-                either Visual Studio 2015 or a recent version of mingw64. FreeBSD 10.0
-                and newer have a modern Clang as the system compiler.
+                这个部分主要应用于Linux和更老版本的BSD。在Mac OS X中，你应当有一个足够现代的Xcode，否则你将需要升级，直到可以为止。Windows中并没有“系统编译器”，因此你必须安装Visual Studio 2015或最新版本的mingw64。FreeBSD 10.0或更新的版本含有现代的Clang可作为系统编译器。
             </p>
             <p>
-                However, some Linux distributions and some other or older BSDs sometimes
-                have extremely old versions of GCC. These steps attempt to help you upgrade
-                you compiler even on such a system. However, if at all possible, we encourage
-                you to use a recent version of a distribution with a modern system compiler
-                that meets these requirements. Note that it is tempting to to install a
-                prior version of Clang and libc++ to be the host compiler, however libc++
-                was not well tested or set up to build on Linux until relatively recently.
-                As a consequence, this guide suggests just using libstdc++ and a modern
-                GCC as the initial host in a bootstrap, and then using Clang (and potentially
-                libc++).
+                然后，一些Linux的发布版，及一些其它的或更老的BSD有时会有极老版本的GCC。下面这些步骤会尝试在这样的一个系统上帮助你更新你的编译器。然而，如果可能的话，我们鼓励你使用能够满足要求的，带有现代系统编译器的最新版本。注意，它会尝试安装先前版本的Clang和libc++到主编译器上，然而，在相对最新的版本之前，libc++尚未被很好地测试，或准备好构建到Linux上。因此，这个指导将使用libstdc++和现代的GCC，作为在bootstrap中的初始主机，然后再使用Clang（和潜在的libc++）。
             </p>
             <p>
-                The first step is to get a recent GCC toolchain installed. The most common
-                distribution on which users have struggled with the version requirements
-                is Ubuntu Precise, 12.04 LTS. For this distribution, one easy option is
-                to install the
+                第一步是安装一个最新版本的工具链。用户在版本需求方面，最常用的版本是Ubuntu Precise，12.04 LTS。对于这个版本，一个很容易的选择，是安装
                 <a class="reference external" href="https://launchpad.net/~ubuntu-toolchain-r/+archive/test">
-                    toolchain testing PPA
+                    工具链测试PPA（Personal Package Archives个人软件包档案）
                 </a>
-                and use it to install a modern GCC. There is a really nice discussions
-                of this on the
+                ，并使用它来安装一个现代的GCC。关于这个，这里有一个很好的探讨：
                 <a class="reference external" href="http://askubuntu.com/questions/271388/how-to-install-gcc-4-8-in-ubuntu-12-04-from-the-terminal">
-                    ask ubuntu stack exchange
+                    请问ubuntu的栈交换
                 </a>
-                . However, not all users can use PPAs and there are many other distributions,
-                so it may be necessary (or just useful, if you’re here you
-                <em>
-                    are
-                </em>
-                doing compiler development after all) to build and install GCC from source.
-                It is also quite easy to do these days.
+                。然而，并非所有的用户都可以使用PPA，这里有很多其它的讨论，因此有必要（或只是有用处，如果你在做编译器的开发的话）从其它的源构建和安装GCC。在这些天做到也是很容易的。
             </p>
             <p>
-                Easy steps for installing GCC 4.8.2:
+                安装GCC 4.8.2的简要步骤：
             </p>
-            <div class="highlight-console">
-                <div class="highlight">
-                    <pre>
-                        <span>
-                        </span>
-                        <span class="gp">
-                            %
-                        </span>
-                        wget https://ftp.gnu.org/gnu/gcc/gcc-4.8.2/gcc-4.8.2.tar.bz2
-                        <span class="gp">
-                            %
-                        </span>
-                        wget https://ftp.gnu.org/gnu/gcc/gcc-4.8.2/gcc-4.8.2.tar.bz2.sig
-                        <span class="gp">
-                            %
-                        </span>
-                        wget https://ftp.gnu.org/gnu/gnu-keyring.gpg
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="nv">
-                            signature_invalid
-                        </span>
-                        <span class="o">
-                            =
-                        </span>
-                        <span class="sb">
-                            `
-                        </span>
-                        gpg --verify --no-default-keyring --keyring ./gnu-keyring.gpg gcc-4.8.2.tar.bz2.sig
-                        <span class="sb">
-                            `
-                        </span>
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="k">
-                            if
-                        </span>
-                        <span class="o">
-                            [
-                        </span>
-                        <span class="nv">
-                            $signature_invalid
-                        </span>
-                        <span class="o">
-                            ]
-                        </span>
-                        <span class="p">
-                            ;
-                        </span>
-                        <span class="k">
-                            then
-                        </span>
-                        <span class="nb">
-                            echo
-                        </span>
-                        <span class="s2">
-                            "Invalid signature"
-                        </span>
-                        <span class="p">
-                            ;
-                        </span>
-                        <span class="nb">
-                            exit
-                        </span>
-                        <span class="m">
-                            1
-                        </span>
-                        <span class="p">
-                            ;
-                        </span>
-                        <span class="k">
-                            fi
-                        </span>
-                        <span class="gp">
-                            %
-                        </span>
-                        tar -xvjf gcc-4.8.2.tar.bz2
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="nb">
-                            cd
-                        </span>
-                        gcc-4.8.2
-                        <span class="gp">
-                            %
-                        </span>
-                        ./contrib/download_prerequisites
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="nb">
-                            cd
-                        </span>
-                        ..
-                        <span class="gp">
-                            %
-                        </span>
-                        mkdir gcc-4.8.2-build
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="nb">
-                            cd
-                        </span>
-                        gcc-4.8.2-build
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="nv">
-                            $PWD
-                        </span>
-                        /../gcc-4.8.2/configure --prefix
-                        <span class="o">
-                            =
-                        </span>
-                        <span class="nv">
-                            $HOME
-                        </span>
-                        /toolchains --enable-languages
-                        <span class="o">
-                            =
-                        </span>
-                        c,c++
-                        <span class="gp">
-                            %
-                        </span>
-                        make -j
-                        <span class="k">
-                            $(
-                        </span>
-                        nproc
-                        <span class="k">
-                            )
-                        </span>
-                        <span class="gp">
-                            %
-                        </span>
-                        make install
-                    </pre>
-                </div>
-            </div>
+            <pre><span></span><span class="gp">%</span> wget https://ftp.gnu.org/gnu/gcc/gcc-4.8.2/gcc-4.8.2.tar.bz2
+<span class="gp">%</span> wget https://ftp.gnu.org/gnu/gcc/gcc-4.8.2/gcc-4.8.2.tar.bz2.sig
+<span class="gp">%</span> wget https://ftp.gnu.org/gnu/gnu-keyring.gpg
+<span class="gp">%</span> <span class="nv">signature_invalid</span><span class="o">=</span><span class="sb">`</span>gpg --verify --no-default-keyring --keyring ./gnu-keyring.gpg gcc-4.8.2.tar.bz2.sig<span class="sb">`</span>
+<span class="gp">%</span> <span class="k">if</span> <span class="o">[</span> <span class="nv">$signature_invalid</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="nb">echo</span> <span class="s2">"Invalid signature"</span> <span class="p">;</span> <span class="nb">exit</span> <span class="m">1</span> <span class="p">;</span> <span class="k">fi</span>
+<span class="gp">%</span> tar -xvjf gcc-4.8.2.tar.bz2
+<span class="gp">%</span> <span class="nb">cd</span> gcc-4.8.2
+<span class="gp">%</span> ./contrib/download_prerequisites
+<span class="gp">%</span> <span class="nb">cd</span> ..
+<span class="gp">%</span> mkdir gcc-4.8.2-build
+<span class="gp">%</span> <span class="nb">cd</span> gcc-4.8.2-build
+<span class="gp">%</span> <span class="nv">$PWD</span>/../gcc-4.8.2/configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/toolchains --enable-languages<span class="o">=</span>c,c++
+<span class="gp">%</span> make -j<span class="k">$(</span>nproc<span class="k">)</span>
+<span class="gp">%</span> make install
+</pre>
             <p>
-                For more details, check out the excellent
+                关于更多细节，参考
                 <a class="reference external" href="http://gcc.gnu.org/wiki/InstallingGCC">
-                    GCC wiki entry
+                    GCC wiki
                 </a>
-                , where I got most of this information from.
+                ，在这里你可以得到大部分的信息。
             </p>
             <p>
-                Once you have a GCC toolchain, configure your build of LLVM to use the
-                new toolchain for your host compiler and C++ standard library. Because
-                the new version of libstdc++ is not on the system library search path,
-                you need to pass extra linker flags so that it can be found at link time
-                (
-                <code class="docutils literal">
-                    <span class="pre">
-                        -L
-                    </span>
-                </code>
-                ) and at runtime (
+                当你有了GCC工具链之后，配置你的LLVM的build来为你的主编译器和C++标准库使用新的工具链。因为libstdc++的新版本并不在系统库的搜索路径中，你需要传递额外的连接标记，让它可以在连接时(<span class="pre">-L</span>)和编译时（
                 <code class="docutils literal">
                     <span class="pre">
                         -rpath
                     </span>
                 </code>
-                ). If you are using CMake, this invocation should produce working binaries:
+                ）被找到。如果你正在使用CMake，这个调用应当回产生可行的bin程序：
             </p>
-            <div class="highlight-console">
-                <div class="highlight">
-                    <pre>
-                        <span>
-                        </span>
-                        <span class="gp">
-                            %
-                        </span>
-                        mkdir build
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="nb">
-                            cd
-                        </span>
-                        build
-                        <span class="gp">
-                            %
-                        </span>
-                        <span class="nv">
-                            CC
-                        </span>
-                        <span class="o">
-                            =
-                        </span>
-                        <span class="nv">
-                            $HOME
-                        </span>
-                        /toolchains/bin/gcc
-                        <span class="nv">
-                            CXX
-                        </span>
-                        <span class="o">
-                            =
-                        </span>
-                        <span class="nv">
-                            $HOME
-                        </span>
-                        /toolchains/bin/g++
-                        <span class="se">
-                            \
-                        </span>
-                        <span class="go">
-                            cmake .. -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$HOME/toolchains/lib64 -L$HOME/toolchains/lib64"
-                        </span>
-                    </pre>
-                </div>
-            </div>
+            <pre><span></span><span class="gp">%</span> mkdir build
+<span class="gp">%</span> <span class="nb">cd</span> build
+<span class="gp">%</span> <span class="nv">CC</span><span class="o">=</span><span class="nv">$HOME</span>/toolchains/bin/gcc <span class="nv">CXX</span><span class="o">=</span><span class="nv">$HOME</span>/toolchains/bin/g++ <span class="se">\</span>
+<span class="go">  cmake .. -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$HOME/toolchains/lib64 -L$HOME/toolchains/lib64"</span>
+</pre>
             <p>
                 If you fail to set rpath, most LLVM binaries will fail on startup with
                 a message from the loader similar to
