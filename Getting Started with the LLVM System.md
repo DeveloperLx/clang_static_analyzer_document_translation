@@ -1672,28 +1672,27 @@
         </a>
     </h2>
     <p>
-        The remainder of this guide is meant to get you up and running with LLVM
-        and to give you some basic information about the LLVM environment.
+        这篇向导的剩余部分，让你可以运行LLVM，并给出你一些关于LLVM环境的基本信息。
     </p>
     <p>
-        The later sections of this guide describe the
+        这篇向导后面的部分描述了LLVM源码树的
         <a class="reference internal" href="#general-layout">
-            general layout
+            一般布局
         </a>
-        of the LLVM source tree, a
+        ，以及一个使用LLVM工具链的
         <a class="reference internal" href="#simple-example">
-            simple example
+            简单例子
         </a>
-        using the LLVM tool chain, and
+        ，并
         <a class="reference internal" href="#links">
-            links
+            连接
         </a>
-        to find more information about LLVM or to get help via e-mail.
+        到查找更多关于LLVM的信息，或通过电子邮件获取帮助。
     </p>
     <div class="section" id="terminology-and-notation">
         <h3>
             <a class="toc-backref" href="#id12">
-                Terminology and Notation
+                术语和符号
             </a>
             <a class="headerlink" href="#terminology-and-notation" title="Permalink to this headline">
                 ¶
