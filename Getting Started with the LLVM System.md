@@ -1604,7 +1604,7 @@
                         -rpath
                     </span>
                 </code>
-                ）被找到。如果你正在使用CMake，这个调用应当回产生可行的bin程序：
+                ）被找到。如果你正在使用CMake，这个调用应当会产生可行的bin程序：
             </p>
             <pre><span></span><span class="gp">%</span> mkdir build
 <span class="gp">%</span> <span class="nb">cd</span> build
