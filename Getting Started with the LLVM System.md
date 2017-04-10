@@ -1604,7 +1604,7 @@
                         -rpath
                     </span>
                 </code>
-                ）被找到。如果你正在使用CMake，这个调用应当会产生可行的bin程序：
+                ）被找到。如果你正在使用CMake，这个调用应当会产生可行的二进制文件：
             </p>
             <pre><span></span><span class="gp">%</span> mkdir build
 <span class="gp">%</span> <span class="nb">cd</span> build
@@ -1612,8 +1612,7 @@
 <span class="go">  cmake .. -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,$HOME/toolchains/lib64 -L$HOME/toolchains/lib64"</span>
 </pre>
             <p>
-                If you fail to set rpath, most LLVM binaries will fail on startup with
-                a message from the loader similar to
+                如果你无法设置rpath，大多数的LLVM二进制文件将在启动时失败，并在loader上显示一条类似于
                 <code class="docutils literal">
                     <span class="pre">
                         libstdc++.so.6:
@@ -1631,37 +1630,32 @@
                         found
                     </span>
                 </code>
-                . This means you need to tweak the -rpath linker flag.
+                的信息。这意味着你需要调整（tweak）-rpath连接器标志。
             </p>
             <p>
-                When you build Clang, you will need to give
+                当构建Clang的时候，为了将它作为你bootstrap中一部分的新主机，你需要给
                 <em>
-                    it
+                    它
                 </em>
-                access to modern C++11 standard library in order to use it as your new
-                host in part of a bootstrap. There are two easy ways to do this, either
-                build (and install) libc++ along with Clang and then use it with the
+                访问现代的C++11标准库的权限。有两种简便的方式来做到这点，一种是构建（并安装）libc++和clang，然后用
                 <code class="docutils literal">
                     <span class="pre">
                         -stdlib=libc++
                     </span>
                 </code>
-                compile and link flag, or install Clang into the same prefix (
+                编译和连接标志来使用它；另一种是安装Clang到和GCC相同的前缀的（
                 <code class="docutils literal">
                     <span class="pre">
                         $HOME/toolchains
                     </span>
                 </code>
-                above) as GCC. Clang will look within its own prefix for libstdc++ and
-                use it if found. You can also add an explicit prefix for Clang to look
-                in for a GCC toolchain with the
+                上面）中。Clang如果可以找到的话，就会在自己的前缀中查找libstdc++并使用它。你也可以为Clang添加一个明确的前缀，来查找带有
                 <code class="docutils literal">
                     <span class="pre">
                         --gcc-toolchain=/opt/my/gcc/prefix
                     </span>
                 </code>
-                flag, passing it to both compile and link commands when using your just-built-Clang
-                to bootstrap.
+                标记的GCC工具链，就可以在使用你刚构建的Clang进行bootstrap时，传递它到编译和连接命令中。
             </p>
         </div>
     </div>
