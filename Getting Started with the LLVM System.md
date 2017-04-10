@@ -1699,14 +1699,11 @@
             </a>
         </h3>
         <p>
-            Throughout this manual, the following names are used to denote paths specific
-            to the local system and working environment.
+            在这个手册中，下列名称用来表示指向本地系统和工作环境的路径。
             <em>
-                These are not environment variables you need to set but just strings used
-                in the rest of this document below
+                这些并不是你需要设置的环境变量，而是在这篇文档下面的部分用到的字符串
             </em>
-            . In any of the examples below, simply replace each of these names with
-            the appropriate pathname on your local system. All these paths are absolute:
+            。在下面的例子中，会在你本地的系统上，将这些名称中的每一个，简单替换为相应的路径名称：
         </p>
         <p>
             <code class="docutils literal">
@@ -1717,7 +1714,7 @@
         </p>
         <blockquote>
             <div>
-                This is the top level directory of the LLVM source tree.
+                LLVM源码树的根目录。
             </div>
         </blockquote>
         <p>
@@ -1729,27 +1726,26 @@
         </p>
         <blockquote>
             <div>
-                This is the top level directory of the LLVM object tree (i.e. the tree
-                where object files and compiled programs will be placed. It can be the
-                same as SRC_ROOT).
+                LLVM对象树的根目录（也就是说，对象文件和被编译的程序的书将被放置的地方。它可以和SRC_ROOT相同）。
             </div>
         </blockquote>
     </div>
     <div class="section" id="unpacking-the-llvm-archives">
         <h3>
             <a class="toc-backref" href="#id13">
-                Unpacking the LLVM Archives
+                打开LLVM的归档
             </a>
             <a class="headerlink" href="#unpacking-the-llvm-archives" title="Permalink to this headline">
                 ¶
             </a>
         </h3>
         <p>
-            If you have the LLVM distribution, you will need to unpack it before you
-            can begin to compile it. LLVM is distributed as a set of two files: the
-            LLVM suite and the LLVM GCC front end compiled for your platform. There
-            is an additional test suite that is optional. Each file is a TAR archive
-            that is compressed with the gzip program.
+            If you have the LLVM distribution, 
+            you will need to unpack it before you can begin to compile it. 
+            LLVM is distributed as a set of two files: 
+            the LLVM suite and the LLVM GCC front end compiled for your platform. 
+            There is an additional test suite that is optional. 
+            Each file is a TAR archive that is compressed with the gzip program.
         </p>
         <p>
             The files are as follows, with
@@ -1795,9 +1791,9 @@
             </a>
         </h3>
         <p>
-            If you have access to our Subversion repository, you can get a fresh copy
-            of the entire source code. All you need to do is check it out from Subversion
-            as follows:
+            If you have access to our Subversion repository, 
+            you can get a fresh copy of the entire source code. 
+            All you need to do is check it out from Subversion as follows:
         </p>
         <ul class="simple">
             <li>
@@ -1852,13 +1848,11 @@
                     llvm
                 </span>
             </code>
-            ‘ directory in the current directory and fully populate it with the LLVM
-            source code, Makefiles, test directories, and local copies of documentation
-            files.
+            ‘ directory in the current directory and fully populate it with the LLVM source code, 
+            Makefiles, test directories, and local copies of documentation files.
         </p>
         <p>
-            If you want to get a specific release (as opposed to the most recent revision),
-            you can checkout it from the ‘
+            If you want to get a specific release (as opposed to the most recent revision), you can checkout it from the ‘
             <code class="docutils literal">
                 <span class="pre">
                     tags
@@ -1870,8 +1864,7 @@
                     trunk
                 </span>
             </code>
-            ‘). The following releases are located in the following subdirectories
-            of the ‘
+            ‘). The following releases are located in the following subdirectories of the ‘
             <code class="docutils literal">
                 <span class="pre">
                     tags
