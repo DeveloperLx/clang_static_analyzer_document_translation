@@ -2036,25 +2036,9 @@
             If you would like to get the LLVM test suite (a separate package as of
             1.4), you get it from the Subversion repository:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    <span class="nb">
-                        cd
-                    </span>
-                    llvm/projects
-                    <span class="gp">
-                        %
-                    </span>
-                    svn co http://llvm.org/svn/llvm-project/test-suite/trunk test-suite
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> <span class="nb">cd</span> llvm/projects
+<span class="gp">%</span> svn co http://llvm.org/svn/llvm-project/test-suite/trunk test-suite
+</pre>
         <p>
             By placing it in the
             <code class="docutils literal">
@@ -2086,133 +2070,40 @@
             </code>
             for each project. You can do the read-only Git clone of LLVM via:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    git clone http://llvm.org/git/llvm.git
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> git clone http://llvm.org/git/llvm.git
+</pre>
         <p>
             If you want to check out clang too, run:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    <span class="nb">
-                        cd
-                    </span>
-                    llvm/tools
-                    <span class="gp">
-                        %
-                    </span>
-                    git clone http://llvm.org/git/clang.git
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> <span class="nb">cd</span> llvm/tools
+<span class="gp">%</span> git clone http://llvm.org/git/clang.git
+</pre>
         <p>
             If you want to check out compiler-rt (required to build the sanitizers),
             run:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    <span class="nb">
-                        cd
-                    </span>
-                    llvm/projects
-                    <span class="gp">
-                        %
-                    </span>
-                    git clone http://llvm.org/git/compiler-rt.git
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> <span class="nb">cd</span> llvm/projects
+<span class="gp">%</span> git clone http://llvm.org/git/compiler-rt.git
+</pre>
         <p>
             If you want to check out libomp (required for OpenMP support), run:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    <span class="nb">
-                        cd
-                    </span>
-                    llvm/projects
-                    <span class="gp">
-                        %
-                    </span>
-                    git clone http://llvm.org/git/openmp.git
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> <span class="nb">cd</span> llvm/projects
+<span class="gp">%</span> git clone http://llvm.org/git/openmp.git
+</pre>
         <p>
             If you want to check out libcxx and libcxxabi (optional), run:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    <span class="nb">
-                        cd
-                    </span>
-                    llvm/projects
-                    <span class="gp">
-                        %
-                    </span>
-                    git clone http://llvm.org/git/libcxx.git
-                    <span class="gp">
-                        %
-                    </span>
-                    git clone http://llvm.org/git/libcxxabi.git
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> <span class="nb">cd</span> llvm/projects
+<span class="gp">%</span> git clone http://llvm.org/git/libcxx.git
+<span class="gp">%</span> git clone http://llvm.org/git/libcxxabi.git
+</pre>
         <p>
             If you want to check out the Test Suite Source Code (optional), run:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    <span class="nb">
-                        cd
-                    </span>
-                    llvm/projects
-                    <span class="gp">
-                        %
-                    </span>
-                    git clone http://llvm.org/git/test-suite.git
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> <span class="nb">cd</span> llvm/projects
+<span class="gp">%</span> git clone http://llvm.org/git/test-suite.git
+</pre>
         <p>
             Since the upstream repository is in Subversion, you should use
             <code class="docutils literal">
@@ -2252,21 +2143,8 @@
             </code>
             by default on the master branch, run the following command:
         </p>
-        <div class="highlight-console">
-            <div class="highlight">
-                <pre>
-                    <span>
-                    </span>
-                    <span class="gp">
-                        %
-                    </span>
-                    git config branch.master.rebase
-                    <span class="nb">
-                        true
-                    </span>
-                </pre>
-            </div>
-        </div>
+        <pre><span></span><span class="gp">%</span> git config branch.master.rebase <span class="nb">true</span>
+</pre>
         <div class="section" id="sending-patches-with-git">
             <h4>
                 <a class="toc-backref" href="#id16">
