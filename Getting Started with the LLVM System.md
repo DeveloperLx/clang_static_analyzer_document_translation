@@ -1665,7 +1665,7 @@
     </span>
     <h2>
         <a class="toc-backref" href="#id11">
-            Getting Started with LLVM
+            LLVM入门
         </a>
         <a class="headerlink" href="#getting-started-with-llvm" title="Permalink to this headline">
             ¶
